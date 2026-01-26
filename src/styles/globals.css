@@ -1,26 +1,64 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (width >=1280px) {
+  .container {
+    max-width: 1280px;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
+  font-size: 16px;
+  font-weight: 400;
+  color: #475467;
 }
+
+img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+h1 {
+  font-family: var(--font-poppins);
+  font-size: 86px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #0e4dc7;
+}
+
+h2 {
+  font-family: var(--font-inter);
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #161616;
+}
+
+/* h3 {
+  font-family: var(--font-neue-montreal);
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 115%;
+}
+
+h4 {
+  font-family: var(--font-neue-montreal);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 110%;
+}
+
+h5 {
+  font-family: var(--font-onest);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h6 {
+  font-family: var(--font-onest);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%;
+} */
