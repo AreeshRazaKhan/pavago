@@ -1,4 +1,5 @@
 import Image from "next/image";
+import OurProcess from "../components/our-process/OurProcess";
 
 export default function Home() {
   return (
@@ -89,6 +90,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <OurProcess />
     </>
   );
 }

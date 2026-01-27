@@ -28,7 +28,7 @@ h1 {
 }
 
 h2 {
-  font-family: var(--font-inter);
+  font-family: var(--font-poppins);
   font-size: 38px;
   font-weight: 500;
   line-height: 1.4;
@@ -67,8 +67,21 @@ h6 {
   font-size: 12px;
 }
 
+.fs-20 {
+  font-size: 20px;
+}
+
 .fs-28 {
   font-size: 28px;
+}
+
+.py-70 {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.mt-50 {
+  margin-top: 50px;
 }
 
 .bg-primary {
@@ -77,6 +90,14 @@ h6 {
 
 .bg-iceblue {
   background: #eaf1fe;
+}
+
+.text-primary {
+  color: #0e4dc7;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
 }
 
 .pulse-badge {
