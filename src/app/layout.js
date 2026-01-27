@@ -2,13 +2,15 @@ import { Inter, Poppins } from "next/font/google";
 import "../styles/globals.css";
 
 const poppins = Poppins({
-  variable: "--font-poppins",
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
+  variable: "--font-poppins",
 });
 
 const inter = Inter({
-  variable: "--font-inter",
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 
