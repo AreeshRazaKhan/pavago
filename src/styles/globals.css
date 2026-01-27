@@ -62,3 +62,150 @@ h6 {
   font-weight: 400;
   line-height: 120%;
 } */
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-28 {
+  font-size: 28px;
+}
+
+.bg-primary {
+  background: #0e4dc7;
+}
+
+.bg-iceblue {
+  background: #eaf1fe;
+}
+
+.pulse-badge {
+  background-color: #fff;
+  border: 1px solid #d0d5dd;
+  border-radius: 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4px;
+  text-decoration: none;
+  box-shadow: 0 1px 2px #1018280d;
+}
+
+.pulse-badge-inner {
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  color: #000;
+  text-align: left;
+  border: 2px solid #d0d5dd;
+  border-radius: 10px;
+  justify-content: flex-start;
+  place-items: center start;
+  width: 100%;
+  padding: 4px 10px;
+  font-family: var(--font-poppins);
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+}
+
+.badge-glow {
+  background-color: #0e4dc7;
+  border-radius: 10px;
+  width: 6px;
+  height: 6px;
+}
+
+.ripple {
+  position: relative;
+  z-index: 20;
+}
+
+.badge-glow.ripple {
+  will-change: transform, opacity;
+}
+
+.ripple:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: inherit;
+  animation: ripple 1.5s infinite;
+  z-index: -1;
+  transform: scale(1);
+  opacity: 1;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(3);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.input-field {
+  color: #333;
+  vertical-align: middle;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 38px;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  display: block;
+  outline: none;
+}
+
+.short-form-control {
+  border: 0 #000;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  height: 55px;
+  margin-bottom: 0;
+  padding-left: 25px;
+  padding-right: 15px;
+  font-size: 18px;
+}
+
+.form-btn {
+  color: #fff;
+  white-space: nowrap;
+  word-break: normal;
+  background-color: #0e4dc7;
+  border-radius: 46px;
+  justify-content: center;
+  align-items: center;
+  min-width: 240px;
+  padding: 13px 25px;
+  font-size: 18px;
+  display: flex;
+}
+
+
+
+
+/* HERO SECTION  */
+.hero-section {
+  background: url('/images/hero-section-bg.svg') no-repeat center top, #eaf1fe;
+}
+
+.hero-section .logo-wrapper {
+  max-width: 140px;
+  max-height: 36px;
+  height: 36px;
+}
