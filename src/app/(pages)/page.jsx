@@ -1,5 +1,7 @@
-import Image from "next/image";
 import OurProcess from "../components/our-process/OurProcess";
+import OurPricing from "../components/pricing/OurPricing";
+import ProcessHighlight from "../components/process-highlight/ProcessHighlight";
+import PulseBadge from "../components/ui/PulseBadge";
 
 export default function Home() {
   return (
@@ -7,12 +9,7 @@ export default function Home() {
       <section className="hero-section pt-45 px-3 md:px-4 lg:px-5">
         <div className="container mx-auto border border-red-500">
           <div className="max-w-225 mx-auto text-center border border-red-500">
-            <div className="pulse-badge">
-              <div className="pulse-badge-inner">
-                <div className="badge-glow ripple"></div>
-                <p>Build Your Dream 'A Team' Today</p>
-              </div>
-            </div>
+            <PulseBadge paragraph={"Build Your Dream 'A Team' Today"} />
             <h1 className="mt-6">
               Helping Businesses Build Global Teams With{" "}
               <span className="font-semibold">A Player Offshore Talent</span>
@@ -92,6 +89,10 @@ export default function Home() {
       </section>
 
       <OurProcess />
+
+      <ProcessHighlight />
+
+      <OurPricing />
     </>
   );
 }

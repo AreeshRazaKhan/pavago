@@ -29,19 +29,20 @@ h1 {
 
 h2 {
   font-family: var(--font-poppins);
-  font-size: 38px;
+  font-size: 42px;
   font-weight: 500;
   line-height: 1.4;
   color: #161616;
 }
 
-/* h3 {
-  font-family: var(--font-neue-montreal);
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 115%;
+h3 {
+  font-family: var(--font-poppins);
+  font-size: 24px;
+  font-weight: 400;
+  color: #000
 }
 
+/* 
 h4 {
   font-family: var(--font-neue-montreal);
   font-size: 30px;
@@ -65,6 +66,10 @@ h6 {
 
 .fs-12 {
   font-size: 12px;
+}
+
+.fs-18 {
+  font-size: 18px;
 }
 
 .fs-20 {
@@ -229,4 +234,10 @@ h6 {
   max-width: 140px;
   max-height: 36px;
   height: 36px;
+}
+
+
+/* PROCESS HIGHLIGHT */
+.process-highlight-inner {
+  background-image: linear-gradient(#0e4dc7, #1463ff);
 }
