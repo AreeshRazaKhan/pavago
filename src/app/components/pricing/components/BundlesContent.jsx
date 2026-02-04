@@ -3,25 +3,46 @@ import React from "react";
 const BundlesContent = () => {
   return (
     <>
-      <div className="flex justify-center mt-8">
-        <div className="w-full max-w-md bg-white text-gray-800 rounded-3xl p-10 flex flex-col items-center text-center shadow-xl border border-gray-100">
-          <div className="bg-[#8ba6ff] p-3 rounded-full mb-4"></div>
+      <div className="flex items-center justify-center gap-12.5">
+        <div className="max-w-125 w-full bg-white p-9 rounded-[28px] gap-9.5 flex flex-col items-center shadow-[0_5px_50px_#0000001a]">
+          <div className="flex flex-col items-center gap-6">
+            <div className="img-wrapper w-12">
+              <img
+                src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67033c2ab2b47bea8e5df7f1_pricing-icon.svg"
+                alt=""
+                className="w-full! h-full! object-contain"
+              />
+            </div>
 
-          <h3 className="text-2xl font-bold mb-6">Bundle Pricing</h3>
+            <h3 className=" font-semibold!">Bundle Pricing</h3>
 
-          <div className="space-y-2 mb-8 text-lg text-gray-700 font-medium">
-            <p>1 Hire = $4k</p>
-            <p>3 Hires = $10k</p>
-            <p>5 Hires = $12k</p>
+            <div className="text-center">
+              <p className="text-[#333]! fs-20">1 Hire = $4k</p>
+              <p className="text-[#333]! fs-20">3 Hires = $10k</p>
+              <p className="text-[#333]! fs-20">1 Hire = $4k</p>
+            </div>
           </div>
 
-          <ul className="space-y-4 text-left w-full mb-8 text-sm text-gray-600">
-            <li className="flex items-start gap-3">
-              <div className="bg-[#2b4cbf] rounded-full p-0.5 mt-0.5 flex-shrink-0"></div>
+          <ul className="flex flex-col gap-5 w-full text-[#333]!">
+            <li className="flex items-center gap-4">
+              <div className="img-wrapper min-w-6 w-6 h-6">
+                <img
+                  src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67033c9de5b263a2157d512e_check-blue.svg"
+                  className="w-full! h-full! object-contain"
+                />
+              </div>
+
               <span>90 day guarantee from the start date of hire.</span>
             </li>
-            <li className="flex items-start gap-3">
-              <div className="bg-[#2b4cbf] rounded-full p-0.5 mt-0.5 flex-shrink-0"></div>
+
+            <li className="flex items-center gap-4">
+              <div className="img-wrapper min-w-6 w-6 h-6">
+                <img
+                  src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67033c9de5b263a2157d512e_check-blue.svg"
+                  className="w-full! h-full! object-contain"
+                />
+              </div>
+
               <span>
                 Deposit of $1000 at time of contract signing, remainder on day
                 of onboarding.
@@ -29,11 +50,11 @@ const BundlesContent = () => {
             </li>
           </ul>
 
-          <div className="w-full border-t border-gray-200 pt-6 mt-auto">
-            <button className="w-full bg-[#2b4cbf] text-white font-bold py-3 rounded-full hover:bg-[#233f9e] transition">
-              Get Started
-            </button>
-          </div>
+          <hr className="w-full text-primary" />
+
+          <a href="#" className="w-full btn btn-lg btn-primary">
+            Get Started
+          </a>
         </div>
       </div>
     </>

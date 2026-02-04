@@ -1,6 +1,8 @@
+import Membership from "../components/membership/Membership";
 import OurProcess from "../components/our-process/OurProcess";
 import OurPricing from "../components/pricing/OurPricing";
 import ProcessHighlight from "../components/process-highlight/ProcessHighlight";
+import Testimonials from "../components/testimonials/Testimonials";
 import PulseBadge from "../components/ui/PulseBadge";
 
 export default function Home() {
@@ -93,6 +95,10 @@ export default function Home() {
       <ProcessHighlight />
 
       <OurPricing />
+
+      <Membership />
+
+      <Testimonials />
     </>
   );
 }

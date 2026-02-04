@@ -9,7 +9,7 @@ const OurProcess = () => {
             <span className="font-poppins text-primary font-semibold">
               Our Process
             </span>
-            <h2 className="font-semibold">
+            <h2 className="font-semibold! max-w-175 m-auto text-center">
               We'll Find Your Next Offshore A Player In 21 Days or Less.
             </h2>
             <p className="fs-20">
