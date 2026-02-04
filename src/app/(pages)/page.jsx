@@ -4,6 +4,7 @@ import OurProcess from "../components/our-process/OurProcess";
 import OurPricing from "../components/pricing/OurPricing";
 import ProcessHighlight from "../components/process-highlight/ProcessHighlight";
 import Testimonials from "../components/testimonials/Testimonials";
+import HiringForm from "../components/ui/HiringForm";
 import PulseBadge from "../components/ui/PulseBadge";
 
 export default function Home() {
@@ -23,21 +24,7 @@ export default function Home() {
               elite offshore talent for remote roles with high impact.
             </p>
 
-            <div className="form-wrapper p-2 max-w-187.5 rounded-[200px] border border-[#0e4dc7] w-full mx-auto mt-14">
-              <div className="form-inner flex items-center bg-white overflow-hidden rounded-[200px]">
-                <input
-                  type="text"
-                  placeholder="Work Email Address *"
-                  required
-                  className="w-full short-form-control input-field"
-                />
-                <div className="flex">
-                  <button type="submit" className="form-btn cursor-pointer">
-                    Start Hiring
-                  </button>
-                </div>
-              </div>
-            </div>
+            <HiringForm />
 
             <div className="text-center flex flex-col justify-center items-center">
               <p className="fs-12 text-center mt-10">
