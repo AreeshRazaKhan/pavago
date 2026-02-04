@@ -1,4 +1,5 @@
 import React from "react";
+import HiringForm from "../ui/HiringForm";
 
 const CTA = () => {
   return (
@@ -15,6 +16,8 @@ const CTA = () => {
               talent acquisition, hiring, onboarding, payroll, retention, and
               compliance.
             </p>
+
+            <HiringForm />
           </div>
         </div>
       </section>
