@@ -76,6 +76,10 @@ h6 {
   font-size: 20px;
 }
 
+.fs-22 {
+  font-size: 22px;
+}
+
 .fs-28 {
   font-size: 28px;
 }
@@ -103,6 +107,10 @@ h6 {
 
 .font-poppins {
   font-family: var(--font-poppins);
+}
+
+.font-inter {
+  font-family: var(--font-inter);
 }
 
 .btn {
@@ -278,4 +286,17 @@ h6 {
 .our-pricing .tabs-inner .tab-btn.active {
   background: #0e4dc7;
   color: #fff;
+}
+
+
+/* TESTIMONIAL SECTION */
+
+.testimonials-section .swiper-navigation-icon {
+  color: white;
+}
+
+.testimonials-section .swiper-slide {
+  height: auto;
+  display: flex;
+  align-items: center;
 }
