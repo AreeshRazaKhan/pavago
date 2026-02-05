@@ -1,4 +1,5 @@
 import CTA from "../components/cta/CTA";
+import FAQ from "../components/faq/FAQ";
 import Membership from "../components/membership/Membership";
 import OurProcess from "../components/our-process/OurProcess";
 import OurPricing from "../components/pricing/OurPricing";
@@ -89,6 +90,8 @@ export default function Home() {
       <Testimonials />
 
       <CTA />
+
+      <FAQ />
     </>
   );
 }

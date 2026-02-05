@@ -1,5 +1,6 @@
 import { Inter, Poppins } from "next/font/google";
 import "../styles/globals.css";
+import Footer from "./components/layout/Footer";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
@@ -26,6 +27,8 @@ export default function RootLayout({ children }) {
         className={`${poppins.variable} ${inter.variable} antialiased`}
       >
         {children}
+
+        <Footer />
       </body>
     </html>
   );
