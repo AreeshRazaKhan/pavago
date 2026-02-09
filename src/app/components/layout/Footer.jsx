@@ -19,6 +19,44 @@ const Footer = () => {
                 Privacy Policy
               </a>
             </div>
+
+            <div className="flex items-center gap-6">
+              <a href="#">
+                <img
+                  src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67038ab42d33780dceb0022d_Twitter.svg"
+                  alt=""
+                  className="w-9! h-9!"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67038a6aa15fd2cfecf581aa_link3ein.svg"
+                  alt=""
+                  className="w-9! h-9!"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67038a6cdda79f74446ea577_insta.svg"
+                  alt=""
+                  className="w-9! h-9!"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67038a6a0051cbea7768c6ad_fb.svg"
+                  alt=""
+                  className="w-9! h-9!"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/6834d76bf55868ebcdedd4a4_youtube.svg"
+                  alt=""
+                  className="w-9! h-9!"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </footer>
