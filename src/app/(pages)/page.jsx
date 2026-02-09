@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <>
       <section className="hero-section pt-45 px-3 md:px-4 lg:px-5">
-        <div className="container mx-auto border border-red-500">
-          <div className="max-w-225 mx-auto text-center border border-red-500">
+        <div className="container mx-auto ">
+          <div className="max-w-225 mx-auto text-center ">
             <PulseBadge paragraph={"Build Your Dream 'A Team' Today"} />
             <h1 className="mt-6">
               Helping Businesses Build Global Teams With{" "}
