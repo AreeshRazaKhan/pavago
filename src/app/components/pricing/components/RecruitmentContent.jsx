@@ -3,8 +3,8 @@ import React from "react";
 const RecruitmentContent = () => {
   return (
     <>
-      <div className="flex items-center justify-center gap-12.5">
-        <div className="max-w-125 w-full bg-primary p-9 rounded-[28px] gap-9.5 flex flex-col items-center shadow-[0_5px_50px_#0000001a]">
+      <div className="flex items-center justify-center gap-9 lg:gap-12.5">
+        <div className="max-w-125 w-full bg-primary px-6 py-9 lg:p-9 rounded-[28px] gap-7 lg:gap-9.5 flex flex-col items-center shadow-[0_5px_50px_#0000001a]">
           <div className="flex flex-col items-center gap-6">
             <div className="img-wrapper w-12">
               <img
@@ -26,9 +26,9 @@ const RecruitmentContent = () => {
             </div>
           </div>
 
-          <ul className="flex flex-col gap-5 w-full">
+          <ul className="flex flex-col gap-4 lg:gap-5 w-full">
             <li className="flex items-center gap-4 text-white">
-              <div className="img-wrapper min-w-6 w-6 h-6">
+              <div className="img-wrapper min-w-4 w-4 h-4 lg:min-w-6 lg:w-6 lg:h-6">
                 <img
                   src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67033c9d2759a79b03517daa_check-white.svg"
                   className="w-full! h-full! object-contain"
@@ -39,7 +39,7 @@ const RecruitmentContent = () => {
             </li>
 
             <li className="flex items-center gap-4 text-white">
-              <div className="img-wrapper min-w-6 w-6 h-6">
+              <div className="img-wrapper min-w-4 w-4 h-4 lg:min-w-6 lg:w-6 lg:h-6">
                 <img
                   src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67033c9d2759a79b03517daa_check-white.svg"
                   className="w-full! h-full! object-contain"
@@ -50,7 +50,7 @@ const RecruitmentContent = () => {
             </li>
 
             <li className="flex items-center gap-4 text-white">
-              <div className="img-wrapper min-w-6 w-6 h-6">
+              <div className="img-wrapper min-w-4 w-4 h-4 lg:min-w-6 lg:w-6 lg:h-6">
                 <img
                   src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67033c9d2759a79b03517daa_check-white.svg"
                   className="w-full! h-full! object-contain"
@@ -61,7 +61,7 @@ const RecruitmentContent = () => {
             </li>
 
             <li className="flex items-center gap-4 text-white">
-              <div className="img-wrapper min-w-6 w-6 h-6">
+              <div className="img-wrapper min-w-4 w-4 h-4 lg:min-w-6 lg:w-6 lg:h-6">
                 <img
                   src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67033c9d2759a79b03517daa_check-white.svg"
                   className="w-full! h-full! object-contain"
@@ -72,7 +72,7 @@ const RecruitmentContent = () => {
             </li>
 
             <li className="flex items-center gap-4 text-white">
-              <div className="img-wrapper min-w-6 w-6 h-6">
+              <div className="img-wrapper min-w-4 w-4 h-4 lg:min-w-6 lg:w-6 lg:h-6">
                 <img
                   src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67033c9d2759a79b03517daa_check-white.svg"
                   className="w-full! h-full! object-contain"
@@ -94,7 +94,7 @@ const RecruitmentContent = () => {
           </a>
         </div>
 
-        <div className="max-w-125 w-full bg-white p-9 rounded-[28px] gap-9.5 flex flex-col items-center shadow-[0_5px_50px_#0000001a]">
+        <div className="max-w-125 w-full bg-white px-6 py-9 lg:p-9 rounded-[28px] gap-7 lg:gap-9.5 flex flex-col items-center shadow-[0_5px_50px_#0000001a]">
           <div className="flex flex-col items-center gap-6">
             <div className="img-wrapper w-12">
               <img
@@ -113,9 +113,9 @@ const RecruitmentContent = () => {
             </div>
           </div>
 
-          <ul className="flex flex-col gap-5 w-full text-[#333]!">
+          <ul className="flex flex-col gap-4 lg:gap-5 w-full text-[#333]!">
             <li className="flex items-center gap-4">
-              <div className="img-wrapper min-w-6 w-6 h-6">
+              <div className="img-wrapper min-w-4 w-4 h-4 lg:min-w-6 lg:w-6 lg:h-6">
                 <img
                   src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67033c9de5b263a2157d512e_check-blue.svg"
                   className="w-full! h-full! object-contain"
@@ -129,7 +129,7 @@ const RecruitmentContent = () => {
             </li>
 
             <li className="flex items-center gap-4">
-              <div className="img-wrapper min-w-6 w-6 h-6">
+              <div className="img-wrapper min-w-4 w-4 h-4 lg:min-w-6 lg:w-6 lg:h-6">
                 <img
                   src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67033c9de5b263a2157d512e_check-blue.svg"
                   className="w-full! h-full! object-contain"
@@ -143,7 +143,7 @@ const RecruitmentContent = () => {
             </li>
 
             <li className="flex items-center gap-4">
-              <div className="img-wrapper min-w-6 w-6 h-6">
+              <div className="img-wrapper min-w-4 w-4 h-4 lg:min-w-6 lg:w-6 lg:h-6">
                 <img
                   src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67033c9de5b263a2157d512e_check-blue.svg"
                   className="w-full! h-full! object-contain"

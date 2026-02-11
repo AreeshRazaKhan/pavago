@@ -38,6 +38,7 @@ const menuData = [
   },
   { title: "About Us", links: [] },
   { title: "Pricing", links: [] },
+  { title: "Resources", columns: [] }, // Added based on image
 ];
 
 const Navbar = () => {
@@ -59,43 +60,49 @@ const Navbar = () => {
               <div
                 key={idx}
                 className="relative py-2 cursor-pointer group"
-                onMouseEnter={() => item.columns && setActiveMenu(idx)}
+                onMouseEnter={() =>
+                  item.columns && item.columns.length > 0 && setActiveMenu(idx)
+                }
                 onMouseLeave={() => setActiveMenu(null)}
               >
                 <button className="flex items-center gap-1 hover:text-blue-200 transition-colors">
-                  {item.title} {item.columns && <ChevronDown size={16} />}
+                  {item.title}{" "}
+                  {item.columns && item.columns.length > 0 && (
+                    <ChevronDown size={16} />
+                  )}
                 </button>
 
-                {/* Mega Menu Dropdown */}
                 <AnimatePresence>
-                  {activeMenu === idx && item.columns && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 15 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 15 }}
-                      className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[800px] bg-[#2D46B9] rounded-3xl p-8 shadow-2xl border border-white/10"
-                    >
-                      <div className="grid grid-cols-4 gap-8">
-                        {item.columns.map((col, cIdx) => (
-                          <div key={cIdx}>
-                            <h3 className="text-xl font-bold mb-4">
-                              {col.label}
-                            </h3>
-                            <ul className="space-y-2">
-                              {col.links.map((link, lIdx) => (
-                                <li
-                                  key={lIdx}
-                                  className="text-blue-100/70 hover:text-white cursor-pointer transition-colors text-sm"
-                                >
-                                  {link}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
-                      </div>
-                    </motion.div>
-                  )}
+                  {activeMenu === idx &&
+                    item.columns &&
+                    item.columns.length > 0 && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 15 }}
+                        className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[800px] bg-[#2D46B9] rounded-3xl p-8 shadow-2xl border border-white/10"
+                      >
+                        <div className="grid grid-cols-4 gap-8">
+                          {item.columns.map((col, cIdx) => (
+                            <div key={cIdx}>
+                              <h3 className="text-xl font-bold mb-4">
+                                {col.label}
+                              </h3>
+                              <ul className="space-y-2">
+                                {col.links.map((link, lIdx) => (
+                                  <li
+                                    key={lIdx}
+                                    className="text-blue-100/70 hover:text-white cursor-pointer transition-colors text-sm"
+                                  >
+                                    {link}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
                 </AnimatePresence>
               </div>
             ))}
@@ -106,7 +113,8 @@ const Navbar = () => {
 
           {/* Action Button & Mobile Toggle */}
           <div className="flex items-center gap-4">
-            <button className="hidden md:block btn btn-white fs-18 font-semibold!">
+            {/* Hidden on screens < 1024px (lg) */}
+            <button className="hidden lg:block btn btn-white fs-18 font-semibold!">
               Schedule a call
             </button>
             <button
@@ -125,18 +133,28 @@ const Navbar = () => {
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              className="lg:hidden bg-[#2D46B9] mt-2 rounded-3xl overflow-hidden p-6 text-white"
+              className="lg:hidden bg-white mt-2 rounded-3xl overflow-hidden p-6 text-[#2D46B9]"
             >
               {menuData.map((item, i) => (
-                <div key={i} className="py-3 border-b border-white/10">
-                  <div className="font-bold text-lg">{item.title}</div>
-                  {item.columns?.map((col, ci) => (
-                    <div key={ci} className="pl-4 mt-2 text-blue-200 text-sm">
-                      {col.label}
-                    </div>
-                  ))}
+                <div key={i} className="py-3 border-b border-gray-100">
+                  <div className="font-bold text-lg flex justify-between items-center">
+                    {item.title}
+                    {item.columns && item.columns.length > 0 && (
+                      <ChevronDown size={18} />
+                    )}
+                  </div>
                 </div>
               ))}
+              <div className="py-3 border-b border-gray-100 font-bold text-lg">
+                Careers
+              </div>
+
+              {/* This is the button moved inside the menu for < 1024px */}
+              <div className="mt-6">
+                <button className="btn btn-primary w-max px-8 py-3 rounded-full text-white font-semibold bg-[#2D46B9]">
+                  Schedule a Call
+                </button>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>

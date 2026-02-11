@@ -300,3 +300,67 @@ h6 {
   display: flex;
   align-items: center;
 }
+
+
+
+@media (max-width: 1279.97px) {
+  h1 {
+    font-size: 70px;
+  }
+
+  .fs-28 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 1023.97px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  .fs-18 {
+    font-size: 17px !important;
+  }
+
+  .fs-20 {
+    font-size: 18px;
+  }
+
+  .fs-28 {
+    font-size: 24px;
+  }
+
+  .mt-50 {
+    margin-top: 38px;
+  }
+
+  .py-70 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .btn {
+    font-size: 18px;
+    padding: 13px 26px;
+
+  }
+
+  .btn.btn-lg {
+    padding: 15px 44px;
+    font-size: 20px;
+  }
+
+
+}

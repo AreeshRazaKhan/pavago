@@ -12,15 +12,15 @@ const OurProcess = () => {
             <h2 className="font-semibold! max-w-175 m-auto text-center">
               We'll Find Your Next Offshore A Player In 21 Days or Less.
             </h2>
-            <p className="fs-20">
+            <p className="fs-20 text-center">
               Here's our five step offshore recruitment process that finds you A
               players across the world.
             </p>
           </div>
 
           <div className="mt-50">
-            <div className="flex justify-center gap-y-5 flex-wrap -mx-5">
-              <div className="w-full md:w-1/2 lg:w-1/3 px-5 ">
+            <div className="flex justify-center gap-y-4 lg:gap-y-5 flex-wrap xl:-mx-5">
+              <div className="w-full md:w-1/2 lg:w-1/3 px-0 xl:px-5 ">
                 <div className="card p-5 flex flex-col items-center gap-4 text-center">
                   <div className="img-wrapper">
                     <img
@@ -36,7 +36,7 @@ const OurProcess = () => {
                 </div>
               </div>
 
-              <div className="w-full md:w-1/2 lg:w-1/3 px-5 ">
+              <div className="w-full md:w-1/2 lg:w-1/3 px-0 xl:px-5">
                 <div className="card p-5 flex flex-col items-center gap-4 text-center">
                   <div className="img-wrapper">
                     <img
@@ -52,7 +52,7 @@ const OurProcess = () => {
                 </div>
               </div>
 
-              <div className="w-full md:w-1/2 lg:w-1/3 px-5 ">
+              <div className="w-full md:w-1/2 lg:w-1/3 px-0 xl:px-5 ">
                 <div className="card p-5 flex flex-col items-center gap-4 text-center">
                   <div className="img-wrapper">
                     <img
@@ -68,7 +68,7 @@ const OurProcess = () => {
                 </div>
               </div>
 
-              <div className="w-full md:w-1/2 lg:w-1/3 px-5 ">
+              <div className="w-full md:w-1/2 lg:w-1/3 px-0 xl:px-5 ">
                 <div className="card p-5 flex flex-col items-center gap-4 text-center">
                   <div className="img-wrapper">
                     <img
@@ -84,7 +84,7 @@ const OurProcess = () => {
                 </div>
               </div>
 
-              <div className="w-full md:w-1/2 lg:w-1/3 px-5 ">
+              <div className="w-full md:w-1/2 lg:w-1/3 px-0 xl:px-5">
                 <div className="card p-5 flex flex-col items-center gap-4 text-center">
                   <div className="img-wrapper">
                     <img
