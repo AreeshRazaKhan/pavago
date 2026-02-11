@@ -3,9 +3,9 @@ import React from "react";
 const RecruitmentContent = () => {
   return (
     <>
-      <div className="flex items-center justify-center gap-9 lg:gap-12.5">
+      <div className="flex items-center justify-center flex-col md:flex-row gap-9 lg:gap-12.5">
         <div className="max-w-125 w-full bg-primary px-6 py-9 lg:p-9 rounded-[28px] gap-7 lg:gap-9.5 flex flex-col items-center shadow-[0_5px_50px_#0000001a]">
-          <div className="flex flex-col items-center gap-6">
+          <div className="flex flex-col items-center gap-5 md:gap-6">
             <div className="img-wrapper w-12">
               <img
                 src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67033c2ab2b47bea8e5df7f1_pricing-icon.svg"
@@ -95,7 +95,7 @@ const RecruitmentContent = () => {
         </div>
 
         <div className="max-w-125 w-full bg-white px-6 py-9 lg:p-9 rounded-[28px] gap-7 lg:gap-9.5 flex flex-col items-center shadow-[0_5px_50px_#0000001a]">
-          <div className="flex flex-col items-center gap-6">
+          <div className="flex flex-col items-center gap-5 md:gap-6">
             <div className="img-wrapper w-12">
               <img
                 src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67033c2ab2b47bea8e5df7f1_pricing-icon.svg"

@@ -21,7 +21,7 @@ const Membership = () => {
           </div>
 
           <div className="mt-50">
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-6 lg:gap-x-8 gap-y-8.5 lg:gap-y-10.5">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6 md:gap-x-6 lg:gap-x-8 md:gap-y-8.5 lg:gap-y-10.5">
               <div className="card bg-white shadow-[0_5px_40px_#0000001a] py-9 lg:py-12.5 px-5 rounded-[20px] flex flex-col items-center gap-3.5">
                 <div className="icon-wrapper w-13">
                   <img
@@ -30,7 +30,7 @@ const Membership = () => {
                   />
                 </div>
 
-                <h3 className="mt-2 mb-3 lg:mt-2.5 lg:mb-4 leading-tight text-center">
+                <h3 className="md:mt-2 md:mb-3 lg:mt-2.5 lg:mb-4 leading-tight text-center">
                   Compliance Assurance
                 </h3>
                 <p className="text-center">
@@ -47,7 +47,7 @@ const Membership = () => {
                   />
                 </div>
 
-                <h3 className="mt-2 mb-3 lg:mt-2.5 lg:mb-4 leading-tight text-center">
+                <h3 className="md:mt-2 md:mb-3 lg:mt-2.5 lg:mb-4 leading-tight text-center">
                   Payroll Management
                 </h3>
                 <p className="text-center">
@@ -64,7 +64,7 @@ const Membership = () => {
                   />
                 </div>
 
-                <h3 className="mt-2 mb-3 lg:mt-2.5 lg:mb-4 leading-tight text-center">
+                <h3 className="md:mt-2 md:mb-3 lg:mt-2.5 lg:mb-4 leading-tight text-center">
                   Ongoing Training
                 </h3>
                 <p className="text-center">
@@ -81,7 +81,7 @@ const Membership = () => {
                   />
                 </div>
 
-                <h3 className="mt-2 mb-3 lg:mt-2.5 lg:mb-4 leading-tight text-center">
+                <h3 className="md:mt-2 md:mb-3 lg:mt-2.5 lg:mb-4 leading-tight text-center">
                   Dedicated Support
                 </h3>
                 <p className="text-center">
@@ -98,7 +98,7 @@ const Membership = () => {
                   />
                 </div>
 
-                <h3 className="mt-2 mb-3 lg:mt-2.5 lg:mb-4 leading-tight text-center">
+                <h3 className="md:mt-2 md:mb-3 lg:mt-2.5 lg:mb-4 leading-tight text-center">
                   SOPs & Forum
                 </h3>
                 <p className="text-center">
@@ -115,7 +115,7 @@ const Membership = () => {
                   />
                 </div>
 
-                <h3 className="mt-2 mb-3 lg:mt-2.5 lg:mb-4 leading-tight text-center">
+                <h3 className="md:mt-2 md:mb-3 lg:mt-2.5 lg:mb-4 leading-tight text-center">
                   Seamless Onboarding
                 </h3>
                 <p className="text-center">
@@ -126,7 +126,7 @@ const Membership = () => {
             </div>
           </div>
 
-          <div className="text-center mt-15  lg:mt-20">
+          <div className="text-center mt-13 md:mt-15  lg:mt-20">
             <a
               href="#"
               className="btn btn-lg btn-primary shadow-[0_5px_50px_#8eb4ff] inline-flex"

@@ -73,8 +73,8 @@ const Testimonials = () => {
                   <div className="text-center text-white">
                     <p className="fs-22">{testimonial.text}</p>
 
-                    <div className="flex flex-col items-center gap-5 mt-6.5">
-                      <div className="logo-wrapper max-w-30 w-30 h-15 max-h-15">
+                    <div className="flex flex-col items-center gap-4 md:gap-5 mt-5 md:mt-6.5">
+                      <div className="logo-wrapper max-w-25 w-25 h-10 max-h-10 md:max-w-30 md:w-30 md:h-15 md:max-h-15">
                         <img
                           src={testimonial.companyLogo}
                           className="w-full! h-full! object-contain"
