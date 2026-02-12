@@ -1,21 +1,14 @@
 import React from "react";
 import HiringForm from "../ui/HiringForm";
 
-const CTA = () => {
+const CTA = ({ heading, para }) => {
   return (
     <>
       <section className="px-3 md:px-4 lg:px-5 py-70">
         <div className="container mx-auto">
           <div className="max-w-200 mx-auto text-center">
-            <h2 className="font-inter font-semibold!">
-              Transform Your Team with Pavago’s{" "}
-              <span className="text-primary">Top 1% Offshore Talent</span>
-            </h2>
-            <p className="fs-20 mt-4">
-              Your full-service offshore recruitment partner to streamline
-              talent acquisition, hiring, onboarding, payroll, retention, and
-              compliance.
-            </p>
+            <h2 className="font-inter font-semibold!">{heading}</h2>
+            <p className="fs-20 mt-4">{para}</p>
 
             <HiringForm />
           </div>

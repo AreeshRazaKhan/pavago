@@ -89,7 +89,17 @@ export default function Home() {
 
       <Testimonials />
 
-      <CTA />
+      <CTA
+        heading={
+          <>
+            Transform Your Team with Pavago’s{" "}
+            <span className="text-primary">Top 1% Offshore Talent</span>
+          </>
+        }
+        para={
+          "Your full-service offshore recruitment partner to streamline talent acquisition, hiring, onboarding, payroll, retention, and compliance."
+        }
+      />
 
       <FAQ />
     </>

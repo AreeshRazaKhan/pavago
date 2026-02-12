@@ -302,6 +302,12 @@ h6 {
 }
 
 
+/* ABOUT HERO SECTION */
+.about-hero-section {
+  background: url("/images/hero-section-bg.svg") top no-repeat, #fafbfe;
+}
+
+
 
 @media (max-width: 1279.97px) {
   h1 {
