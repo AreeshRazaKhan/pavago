@@ -23,7 +23,7 @@ const ProcessHighlight = () => {
                 You Think of Them. We Find Them.
               </h2>
 
-              <p className="text-white! fs-18  mt-8 lg:mt-12">
+              <p className="text-white! fs-18 mt-6 sm:mt-8 lg:mt-12">
                 Transform your team with top talent from our global network,
                 hand-picked and pre-vetted to fit your needs - at 70% less than
                 traditional hiring costs. Our offshore recruitment merges smart

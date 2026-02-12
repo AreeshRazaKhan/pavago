@@ -41,7 +41,7 @@ const OurPricing = () => {
                   ))}
                 </div>
 
-                <div className="tabs-content mt-12 lg:mt-15 w-full">
+                <div className="tabs-content mt-10 sm:mt-12 lg:mt-15 w-full">
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={activeTab ? activeTab : "empty"}

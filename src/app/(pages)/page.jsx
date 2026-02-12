@@ -11,7 +11,7 @@ import PulseBadge from "../components/ui/PulseBadge";
 export default function Home() {
   return (
     <>
-      <section className="hero-section pt-40 lg:pt-45 px-3 md:px-4 lg:px-5">
+      <section className="hero-section pt-32 sm:pt-40 lg:pt-45 px-3 md:px-4 lg:px-5">
         <div className="container mx-auto ">
           <div className="max-w-225 mx-auto text-center ">
             <PulseBadge paragraph={"Build Your Dream 'A Team' Today"} />
@@ -28,7 +28,7 @@ export default function Home() {
             <HiringForm />
 
             <div className="text-center flex flex-col justify-center items-center">
-              <p className="fs-12 text-center mt-10">
+              <p className="fs-12 text-center mt-8 sm:mt-10">
                 Join 150+ Bussinesses Already Growing With Pavago's Offshore
                 Recruitment Services
               </p>

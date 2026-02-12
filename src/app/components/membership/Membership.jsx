@@ -21,7 +21,7 @@ const Membership = () => {
           </div>
 
           <div className="mt-50">
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6 md:gap-x-6 lg:gap-x-8 md:gap-y-8.5 lg:gap-y-10.5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6 md:gap-x-6 lg:gap-x-8 md:gap-y-8.5 lg:gap-y-10.5">
               <div className="card bg-white shadow-[0_5px_40px_#0000001a] py-9 lg:py-12.5 px-5 rounded-[20px] flex flex-col items-center gap-3.5">
                 <div className="icon-wrapper w-13">
                   <img
