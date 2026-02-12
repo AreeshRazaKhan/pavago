@@ -36,22 +36,29 @@ const menuData = [
       },
     ],
   },
-  { title: "About Us", links: [] },
-  { title: "Pricing", links: [] },
-  { title: "Resources", columns: [] }, // Added based on image
+  { title: "About Us", path: "/about" },
+  { title: "Pricing", path: "/pricing" },
+  { title: "Resources", path: "/resources" },
 ];
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
+  // Helper to turn "Sales Dev Rep" into "/find-a-hire/sales-dev-rep"
+  const generateSlug = (category, link) => {
+    return `/${category.toLowerCase().replace(/\s+/g, "-")}/${link.toLowerCase().replace(/\s+/g, "-")}`;
+  };
+
   return (
-    <header className="fixed top-5 left-0 right-0 w-full z-50  px-3 md:px-4 lg:px-5">
+    <header className="fixed top-5 left-0 right-0 w-full z-50 px-3 md:px-4 lg:px-5">
       <div className="container mx-auto">
-        <nav className="flex items-center justify-between bg-primary p-3 ps-5.5 sm:ps-7.5 rounded-full text-white relative">
+        <nav className="flex items-center justify-between bg-[#2D46B9] p-3 ps-5.5 sm:ps-7.5 rounded-full text-white relative">
           {/* Logo */}
           <div className="logo-wrapper max-w-28 sm:max-w-36">
-            <img src="/images/navbar_logo.png" alt="" />
+            <a href="/">
+              <img src="/images/navbar_logo.png" alt="Logo" />
+            </a>
           </div>
 
           {/* Desktop Menu */}
@@ -60,61 +67,68 @@ const Navbar = () => {
               <div
                 key={idx}
                 className="relative py-2 cursor-pointer group"
-                onMouseEnter={() =>
-                  item.columns && item.columns.length > 0 && setActiveMenu(idx)
-                }
+                onMouseEnter={() => item.columns && setActiveMenu(idx)}
                 onMouseLeave={() => setActiveMenu(null)}
               >
-                <button className="flex items-center gap-1 hover:text-blue-200 transition-colors">
-                  {item.title}{" "}
-                  {item.columns && item.columns.length > 0 && (
-                    <ChevronDown size={16} />
-                  )}
-                </button>
+                {item.columns ? (
+                  <button className="flex items-center gap-1 hover:text-blue-200 transition-colors">
+                    {item.title} <ChevronDown size={16} />
+                  </button>
+                ) : (
+                  <a
+                    href={item.path}
+                    className="hover:text-blue-200 transition-colors"
+                  >
+                    {item.title}
+                  </a>
+                )}
 
+                {/* Mega Menu Dropdown */}
                 <AnimatePresence>
-                  {activeMenu === idx &&
-                    item.columns &&
-                    item.columns.length > 0 && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 15 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 15 }}
-                        className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[800px] bg-[#2D46B9] rounded-3xl p-8 shadow-2xl border border-white/10"
-                      >
-                        <div className="grid grid-cols-4 gap-8">
-                          {item.columns.map((col, cIdx) => (
-                            <div key={cIdx}>
-                              <h3 className="text-xl font-bold mb-4">
-                                {col.label}
-                              </h3>
-                              <ul className="space-y-2">
-                                {col.links.map((link, lIdx) => (
-                                  <li
-                                    key={lIdx}
-                                    className="text-blue-100/70 hover:text-white cursor-pointer transition-colors text-sm"
+                  {activeMenu === idx && item.columns && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 15 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 15 }}
+                      className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[850px] bg-[#2D46B9] rounded-3xl p-10 shadow-2xl border border-white/10"
+                    >
+                      <div className="grid grid-cols-4 gap-8">
+                        {item.columns.map((col, cIdx) => (
+                          <div key={cIdx}>
+                            <h3 className="text-lg font-bold mb-4 text-white">
+                              {col.label}
+                            </h3>
+                            <ul className="space-y-3">
+                              {col.links.map((linkText, lIdx) => (
+                                <li key={lIdx}>
+                                  <a
+                                    href={generateSlug(col.label, linkText)}
+                                    className="text-blue-100/70 hover:text-white transition-colors text-sm block"
                                   >
-                                    {link}
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          ))}
-                        </div>
-                      </motion.div>
-                    )}
+                                    {linkText}
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
                 </AnimatePresence>
               </div>
             ))}
-            <a href="/careers" className="hover:text-blue-200">
+            <a
+              href="/careers"
+              className="hover:text-blue-200 transition-colors"
+            >
               Careers
             </a>
           </div>
 
           {/* Action Button & Mobile Toggle */}
           <div className="flex items-center gap-4">
-            {/* Hidden on screens < 1024px (lg) */}
-            <button className="hidden lg:block btn btn-white fs-18 font-semibold!">
+            <button className="hidden lg:block bg-white text-[#2D46B9] px-6 py-2 rounded-full font-semibold hover:bg-blue-50 transition-colors">
               Schedule a call
             </button>
             <button
@@ -133,25 +147,25 @@ const Navbar = () => {
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              className="lg:hidden bg-white mt-2 rounded-3xl overflow-hidden p-6 text-[#2D46B9]"
+              className="lg:hidden bg-white mt-2 rounded-3xl overflow-hidden p-6 text-[#2D46B9] shadow-xl"
             >
               {menuData.map((item, i) => (
                 <div key={i} className="py-3 border-b border-gray-100">
                   <div className="font-bold text-lg flex justify-between items-center">
-                    {item.title}
-                    {item.columns && item.columns.length > 0 && (
-                      <ChevronDown size={18} />
+                    {item.columns ? (
+                      <span>{item.title}</span>
+                    ) : (
+                      <a href={item.path}>{item.title}</a>
                     )}
+                    {item.columns && <ChevronDown size={18} />}
                   </div>
                 </div>
               ))}
               <div className="py-3 border-b border-gray-100 font-bold text-lg">
-                Careers
+                <a href="/careers">Careers</a>
               </div>
-
-              {/* This is the button moved inside the menu for < 1024px */}
               <div className="mt-6">
-                <button className="btn btn-primary w-max px-8 py-3 rounded-full text-white font-semibold bg-[#2D46B9]">
+                <button className="w-full py-4 rounded-full text-white font-semibold bg-[#2D46B9]">
                   Schedule a Call
                 </button>
               </div>
