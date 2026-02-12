@@ -33,7 +33,7 @@ export default function Home() {
                 Recruitment Services
               </p>
 
-              <div className="mt-12.5 flex items-center justify-center gap-5 md:gap-7.5">
+              <div className="mt-12.5 flex items-center justify-center gap-3 sm:gap-5 md:gap-7.5">
                 <div className="logo-wrapper">
                   <img
                     src="http://cdn.prod.website-files.com/665e07a05eaec7b470f49845/670d2e2fc6d5023c45b6aa49_poologylogo.webp"

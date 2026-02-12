@@ -46,11 +46,11 @@ const Navbar = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   return (
-    <header className="fixed top-5 left-0 right-0 w-full z-50 px-4">
+    <header className="fixed top-5 left-0 right-0 w-full z-50  px-3 md:px-4 lg:px-5">
       <div className="container mx-auto">
-        <nav className="flex items-center justify-between bg-primary p-3 ps-7.5 rounded-full text-white relative">
+        <nav className="flex items-center justify-between bg-primary p-3 ps-5.5 sm:ps-7.5 rounded-full text-white relative">
           {/* Logo */}
-          <div className="logo-wrapper max-w-36">
+          <div className="logo-wrapper max-w-28 sm:max-w-36">
             <img src="/images/navbar_logo.png" alt="" />
           </div>
 

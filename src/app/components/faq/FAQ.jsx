@@ -25,7 +25,7 @@ const FAQ = () => {
   };
   return (
     <>
-      <section className="bg-primary py-70 px-3 md:px-4 lg:px-5">
+      <section className="bg-primary py-70 px-3 md:px-4 lg:px-5 overflow-x-hidden">
         <div className="container mx-auto">
           <h2 className="font-semibold! text-center text-white!">
             Frequently Ask Questions
@@ -74,7 +74,7 @@ const FAQ = () => {
             </div>
           </div>
 
-          <div className="flex justify-center mt-18 md:mt-22 lg:mt-27.5">
+          <div className="flex justify-center mt-12 sm:mt-18 md:mt-22 lg:mt-27.5">
             <div className="flex flex-col justify-center">
               <h3 className="text-white! underline font-inter">
                 Still have questions?
@@ -83,7 +83,7 @@ const FAQ = () => {
               <img
                 src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67038359125260b47d274571_arrow-2.svg"
                 alt=""
-                className="self-end -mt-5 -mb-12.5 translate-x-full h-[75%]! md:h-auto!"
+                className="self-end -mt-5 -mb-12.5 translate-x-full h-[65%]! sm:h-[75%]! md:h-auto! arrow"
               />
 
               <button className="btn btn-white font-semibold! cursor-pointer shadow-[0_5px_50px_#8eb4ff]">
