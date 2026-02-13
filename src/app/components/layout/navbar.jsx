@@ -38,7 +38,6 @@ const menuData = [
   },
   { title: "About Us", path: "/about" },
   { title: "Pricing", path: "/pricing" },
-  { title: "Resources", path: "/resources" },
 ];
 
 const Navbar = () => {
@@ -53,7 +52,7 @@ const Navbar = () => {
   return (
     <header className="fixed top-5 left-0 right-0 w-full z-50 px-3 md:px-4 lg:px-5">
       <div className="container mx-auto">
-        <nav className="flex items-center justify-between bg-[#2D46B9] p-3 ps-5.5 sm:ps-7.5 rounded-full text-white relative">
+        <nav className="flex items-center justify-between bg-[#0e4dc7] ps-5.5 p-3 sm:ps-7.5 rounded-full text-white relative">
           {/* Logo */}
           <div className="logo-wrapper max-w-28 sm:max-w-36">
             <a href="/">
@@ -90,12 +89,12 @@ const Navbar = () => {
                       initial={{ opacity: 0, y: 15 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 15 }}
-                      className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[850px] bg-[#2D46B9] rounded-3xl p-10 shadow-2xl border border-white/10"
+                      className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[850px] bg-[#0e4dc7] rounded-3xl p-10 shadow-2xl border border-white/10"
                     >
                       <div className="grid grid-cols-4 gap-8">
                         {item.columns.map((col, cIdx) => (
                           <div key={cIdx}>
-                            <h3 className="text-lg font-bold mb-4 text-white">
+                            <h3 className="font-bold mb-4 text-white!">
                               {col.label}
                             </h3>
                             <ul className="space-y-3">
@@ -118,17 +117,11 @@ const Navbar = () => {
                 </AnimatePresence>
               </div>
             ))}
-            <a
-              href="/careers"
-              className="hover:text-blue-200 transition-colors"
-            >
-              Careers
-            </a>
           </div>
 
           {/* Action Button & Mobile Toggle */}
           <div className="flex items-center gap-4">
-            <button className="hidden lg:block bg-white text-[#2D46B9] px-6 py-2 rounded-full font-semibold hover:bg-blue-50 transition-colors">
+            <button className="hidden lg:block btn btn-white fs-18 font-semibold!">
               Schedule a call
             </button>
             <button
@@ -147,11 +140,11 @@ const Navbar = () => {
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              className="lg:hidden bg-white mt-2 rounded-3xl overflow-hidden p-6 text-[#2D46B9] shadow-xl"
+              className="lg:hidden bg-white mt-2 rounded-3xl overflow-hidden p-6  shadow-xl"
             >
               {menuData.map((item, i) => (
                 <div key={i} className="py-3 border-b border-gray-100">
-                  <div className="font-bold text-lg flex justify-between items-center">
+                  <div className=" flex justify-between items-center">
                     {item.columns ? (
                       <span>{item.title}</span>
                     ) : (
@@ -161,11 +154,9 @@ const Navbar = () => {
                   </div>
                 </div>
               ))}
-              <div className="py-3 border-b border-gray-100 font-bold text-lg">
-                <a href="/careers">Careers</a>
-              </div>
+
               <div className="mt-6">
-                <button className="w-full py-4 rounded-full text-white font-semibold bg-[#2D46B9]">
+                <button className="w-full btn btn-primary">
                   Schedule a Call
                 </button>
               </div>
