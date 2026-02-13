@@ -1,8 +1,9 @@
+import React from "react";
 import CTA from "@/app/components/cta/CTA";
 import Testimonials from "@/app/components/testimonials/Testimonials";
 import HiringForm from "@/app/components/ui/HiringForm";
 import PricingTabs from "@/app/components/ui/PricingTabs";
-import React from "react";
+import "../../../styles/globals.css";
 
 const page = () => {
   return (
@@ -23,8 +24,10 @@ const page = () => {
         </div>
       </section>
 
-      <section className="py-70 px-3 md:px-4 lg:px-5">
-        <div className="container mx-auto">{/* <PricingTabs /> */}</div>
+      <section className="py-70 px-3 md:px-4 lg:px-5 our-pricing">
+        <div className="container mx-auto">
+          <PricingTabs />
+        </div>
       </section>
 
       <Testimonials />

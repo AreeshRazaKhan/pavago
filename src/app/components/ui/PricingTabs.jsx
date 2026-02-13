@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import RecruitmentContent from "./components/RecruitmentContent";
-import BundlesContent from "./components/BundlesContent";
+import RecruitmentContent from "../pricing/components/RecruitmentContent";
+import BundlesContent from "../pricing/components/BundlesContent";
 
 const tabs = [
   {

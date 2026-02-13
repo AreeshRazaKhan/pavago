@@ -83,7 +83,7 @@ export default function Home() {
 
       <ProcessHighlight />
 
-      {/* <OurPricing /> */}
+      <OurPricing />
 
       <Membership />
 

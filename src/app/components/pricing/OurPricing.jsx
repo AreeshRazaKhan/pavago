@@ -1,4 +1,5 @@
 import React from "react";
+import PricingTabs from "../ui/PricingTabs";
 
 const OurPricing = () => {
   return (
@@ -11,7 +12,7 @@ const OurPricing = () => {
             </div>
 
             <div className="mt-5 w-full">
-              <OurPricing />
+              <PricingTabs />
             </div>
           </div>
         </div>
