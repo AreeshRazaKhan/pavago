@@ -17,18 +17,18 @@ const ProcessHighlight = () => {
             <div className="w-full lg:w-[45%]">
               <PulseBadge
                 margin={"ml-0!"}
-                paragraph={"Build Your Dream Offshore Team Today"}
+                paragraph={"Create Your Elite Global Squad Now"}
               />
               <h2 className="text-white! mt-6 md:mt-8 lg:mt-12">
-                You Think of Them. We Find Them.
+                You Envision Them. We Secure Them.
               </h2>
 
               <p className="text-white! fs-18 mt-6 sm:mt-8 lg:mt-12">
-                Transform your team with top talent from our global network,
-                hand-picked and pre-vetted to fit your needs - at 70% less than
-                traditional hiring costs. Our offshore recruitment merges smart
-                AI with real human insight to help you scale your team the right
-                way.
+                Revolutionize your squad using elite professionals from our
+                international circle, custom-selected and pre-screened to meet
+                your goals - at 70% below standard staffing prices. Our global
+                sourcing blends advanced AI with actual expert intuition to
+                assist you growing your staff the best way.
               </p>
             </div>
           </div>

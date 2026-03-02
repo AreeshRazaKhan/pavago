@@ -7,16 +7,16 @@ const Membership = () => {
         <div className="container mx-auto">
           <div className="flex flex-col items-center justify-center gap-3.5  max-w-225 m-auto">
             <span className="font-poppins text-primary font-semibold">
-              Membership Perks
+              Partner Benefits
             </span>
             <h2 className="font-semibold! text-center">
-              Beyond Offshore Recruitment Services, Support for Your Success
+              Past Global Staffing Solutions, Guidance for Your Growth
             </h2>
             <p className="fs-20 text-center">
-              Hiring through Pavago means more than just getting top offshore
-              talent. You’ll benefit from our full range of support services to
-              ensure your new hires succeed and integrate seamlessly into your
-              business
+              Recruiting via Prismolix provides more than just obtaining elite
+              global staff. You'll gain from our complete suite of assistance
+              tools to guarantee your fresh recruits excel and blend perfectly
+              into your company.
             </p>
           </div>
 
@@ -31,11 +31,11 @@ const Membership = () => {
                 </div>
 
                 <h3 className="md:mt-2 md:mb-3 lg:mt-2.5 lg:mb-4 leading-tight text-center">
-                  Compliance Assurance
+                  Regulatory Security
                 </h3>
                 <p className="text-center">
-                  Stay compliant with all relevant regulations without the
-                  stress. We take care of all the legalities for you.
+                  Remain aligned with every necessary guideline without the
+                  hassle. We handle all the formalities for you.
                 </p>
               </div>
 
@@ -48,11 +48,12 @@ const Membership = () => {
                 </div>
 
                 <h3 className="md:mt-2 md:mb-3 lg:mt-2.5 lg:mb-4 leading-tight text-center">
-                  Payroll Management
+                  Financial Administration
                 </h3>
                 <p className="text-center">
-                  Forget about the hassles of payroll. We handle all payments,
-                  so you can focus on growing your business.
+                  Ignore about the burdens of salaries. We manage all
+                  disbursements, so you may concentrate on expanding your
+                  company.
                 </p>
               </div>
 
@@ -65,11 +66,11 @@ const Membership = () => {
                 </div>
 
                 <h3 className="md:mt-2 md:mb-3 lg:mt-2.5 lg:mb-4 leading-tight text-center">
-                  Ongoing Training
+                  Continuous Coaching
                 </h3>
                 <p className="text-center">
-                  Your new team members will receive continuous training to stay
-                  ahead of industry trends and improve their skills.
+                  Your fresh staff recruits shall undergo persistent development
+                  to remain atop market patterns and enhance their expertise.
                 </p>
               </div>
 
@@ -82,11 +83,11 @@ const Membership = () => {
                 </div>
 
                 <h3 className="md:mt-2 md:mb-3 lg:mt-2.5 lg:mb-4 leading-tight text-center">
-                  Dedicated Support
+                  Committed Assistance
                 </h3>
                 <p className="text-center">
-                  Enjoy peace of mind with our dedicated support team, ready to
-                  assist you and your hires at every step.
+                  Experience complete confidence with our focused support squad,
+                  prepared to guide you and your recruits throughout.
                 </p>
               </div>
 
@@ -99,11 +100,11 @@ const Membership = () => {
                 </div>
 
                 <h3 className="md:mt-2 md:mb-3 lg:mt-2.5 lg:mb-4 leading-tight text-center">
-                  SOPs & Forum
+                  Systems & Portal
                 </h3>
                 <p className="text-center">
-                  You get access to our proven set of SOPs, that have brought us
-                  success in our business
+                  You gain entry to our validated suite of SOPs, which have
+                  delivered us results in our company.
                 </p>
               </div>
 
@@ -116,11 +117,11 @@ const Membership = () => {
                 </div>
 
                 <h3 className="md:mt-2 md:mb-3 lg:mt-2.5 lg:mb-4 leading-tight text-center">
-                  Seamless Onboarding
+                  Effortless Integration
                 </h3>
                 <p className="text-center">
-                  We assist with the onboarding process to ensure your new
-                  offshore professional integrates seamlessly into your team.
+                  We support with the startup phase to guarantee your fresh
+                  global expert blends perfectly into your squad.
                 </p>
               </div>
             </div>
@@ -131,7 +132,7 @@ const Membership = () => {
               href="#"
               className="btn btn-lg btn-primary shadow-[0_5px_50px_#B57AFF] inline-flex"
             >
-              Find Your Offshore A Player
+              Secure Your Global Elite
             </a>
           </div>
         </div>

@@ -8,7 +8,7 @@ const OurPricing = () => {
         <div className="container mx-auto">
           <div className="flex flex-col items-center">
             <div className="text-center">
-              <h2>Our Pricing (Made Risk Free For You)</h2>
+              <h2>Our Fees (Completely Secure For You)</h2>
             </div>
 
             <div className="mt-5 w-full">

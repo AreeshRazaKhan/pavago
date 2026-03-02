@@ -14,7 +14,7 @@ const RecruitmentContent = () => {
               />
             </div>
 
-            <h3 className="text-white! font-semibold!">Pavago Membership</h3>
+            <h3 className="text-white! font-semibold!">Prismolix Membership</h3>
 
             <div className="text-center">
               <h2 className="text-white! font-normal!">
@@ -90,7 +90,7 @@ const RecruitmentContent = () => {
           </h3>
 
           <a href="#" className="w-full btn btn-lg btn-white">
-            Find Your Offshore A Player
+            Secure Your Global Elite
           </a>
         </div>
 
@@ -162,7 +162,7 @@ const RecruitmentContent = () => {
           <h3 className="text-primary font-semibold!">Recruitment Only</h3>
 
           <a href="#" className="w-full btn btn-lg btn-primary">
-            Find Your Offshore A Player
+            Secure Your Global Elite
           </a>
         </div>
       </div>

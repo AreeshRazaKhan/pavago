@@ -11,31 +11,32 @@ import PulseBadge from "../components/ui/PulseBadge";
 export default function Home() {
   return (
     <>
-      <section className="hero-section pt-32 sm:pt-40 lg:pt-45 px-3 md:px-4 lg:px-5">
+      <section className="hero-section pt-32 sm:pt-40 lg:pt-45 px-3 md:px-4 lg:px-5 pb-20">
         <div className="container mx-auto ">
           <div className="max-w-225 mx-auto text-center ">
-            <PulseBadge paragraph={"Build Your Dream 'A Team' Today"} />
+            <PulseBadge paragraph={"Assemble Your Elite Global Team"} />
             <h1 className="mt-6">
-              Helping Businesses Build Global Teams With{" "}
+              Empowering Growth By Sourcing Top Global Talent For {""}
               <span className="font-semibold text-primary">
-                A Player Offshore Talent
+                Elite Offshore Teams
               </span>
             </h1>
             <p className="fs-28 mt-6">
-              We specialize in offshore recruitment for companies that want
-              A‑players only. Our process is built to identify, vet, and deliver
-              elite offshore talent for remote roles with high impact.
+              Our experts provide global staffing for firms seeking top-tier
+              members. Your strategy aims to find, screen, and supply premium
+              international professionals for virtual positions with major
+              influence.
             </p>
 
             <HiringForm />
 
             <div className="text-center flex flex-col justify-center items-center">
               <p className="fs-12 text-center mt-8 sm:mt-10">
-                Join 150+ Bussinesses Already Growing With Pavago's Offshore
-                Recruitment Services
+                Partner 150+ Organizations Currently Scaling Using Prismolix's
+                Global Staffing Solutions
               </p>
 
-              <div className="mt-12.5 flex items-center justify-center gap-3 sm:gap-5 md:gap-7.5">
+              {/* <div className="mt-12.5 flex items-center justify-center gap-3 sm:gap-5 md:gap-7.5">
                 <div className="logo-wrapper">
                   <img
                     src="http://cdn.prod.website-files.com/665e07a05eaec7b470f49845/670d2e2fc6d5023c45b6aa49_poologylogo.webp"
@@ -75,7 +76,7 @@ export default function Home() {
                     className="w-full! h-full! object-contain"
                   />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

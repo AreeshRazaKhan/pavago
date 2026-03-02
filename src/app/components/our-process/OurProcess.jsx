@@ -10,11 +10,11 @@ const OurProcess = () => {
               Our Process
             </span>
             <h2 className="font-semibold! max-w-175 m-auto text-center">
-              We'll Find Your Next Offshore A Player In 21 Days or Less.
+              Your Elite International Talent Found Within 21 Days Guaranteed.
             </h2>
             <p className="fs-20 text-center">
-              Here's our five step offshore recruitment process that finds you A
-              players across the world.
+              Discover our five phase global hiring strategy that locates top
+              talent throughout the globe.
             </p>
           </div>
 
@@ -25,10 +25,10 @@ const OurProcess = () => {
                   <div className="img-wrapper w-[52px] h-[52px]">
                     <img src="/images/icon-1.svg" alt="" />
                   </div>
-                  <h3>1. Discovery Call</h3>
+                  <h3>1. Strategic Consultation</h3>
                   <p>
-                    We learn about your needs. We explain our abilities. We
-                    decide together if we are a good fit.
+                    We analyze your goals. We demonstrate our skills. We
+                    determine jointly if our partnership works.
                   </p>
                 </div>
               </div>
@@ -38,10 +38,10 @@ const OurProcess = () => {
                   <div className="img-wrapper w-[52px] h-[52px]">
                     <img src="/images/icon-2.svg" alt="" />
                   </div>
-                  <h3>2. Client Launch</h3>
+                  <h3>2. Strategic Onboarding</h3>
                   <p>
-                    We analyse every aspect: Skills, Profile, and Cultural Fit
-                    to find your perfect match.
+                    We evaluate each factor: Talent, Persona, and Synergy
+                    Alignment to secure your ideal candidate.
                   </p>
                 </div>
               </div>
@@ -51,10 +51,10 @@ const OurProcess = () => {
                   <div className="img-wrapper w-[52px] h-[52px]">
                     <img src="/images/icon-3.svg" alt="" />
                   </div>
-                  <h3>3. A Player Search</h3>
+                  <h3>3. Top Talent Search</h3>
                   <p>
-                    We combine local expertise and our proven AI system to find
-                    your perfect A Player.
+                    We merge regional insight and our validated AI network to
+                    locate your ideal Professional.
                   </p>
                 </div>
               </div>
@@ -64,10 +64,10 @@ const OurProcess = () => {
                   <div className="img-wrapper w-[52px] h-[52px]">
                     <img src="/images/icon-4.svg" alt="" />
                   </div>
-                  <h3>4. Screening & interviews</h3>
+                  <h3>4. Evaluation & Meetings</h3>
                   <p>
-                    Simple 3 steps process: candidate video, our interview, then
-                    your final interview with our support.
+                    Direct 3 stage method: applicant recording, our assessment,
+                    then your closing discussion with our guidance.
                   </p>
                 </div>
               </div>
@@ -77,10 +77,10 @@ const OurProcess = () => {
                   <div className="img-wrapper w-[52px] h-[52px]">
                     <img src="/images/icon-5.svg" alt="" />
                   </div>
-                  <h3>5. A Player talent secured!</h3>
+                  <h3>5. Top Talent Hired!</h3>
                   <p>
-                    Together, we choose your ideal candidate who's ready to
-                    deliver results.
+                    Collectively, we select your perfect hire who is prepared to
+                    achieve targets.
                   </p>
                 </div>
               </div>
