@@ -10,13 +10,13 @@ const page = () => {
         <div className="container mx-auto">
           <div className="max-w-250 mx-auto">
             <h1 className="text-black! text-center font-inter">
-              Pavago connects businesses with{" "}
+              Prismolix links companies with {""}
               <span className="text-primary">
-                top talent, streamlining hiring processes,
+                elite experts, optimizing recruitment workflows
               </span>{" "}
-              and providing{" "}
-              <span className="text-primary">comprehensive support</span> for
-              long-term success.
+              and offering{" "}
+              <span className="text-primary">complete assistance</span> for
+              sustained achievement.
             </h1>
 
             <HiringForm />
@@ -28,42 +28,44 @@ const page = () => {
         <div className="container mx-auto">
           <div className="flex flex-col gap-10 sm:gap-20 lg:gap-25">
             <div className="text-center max-w-220 mx-auto">
-              <h2 className="mb-4 sm:mb-6 md:mb-7.5">Our Story</h2>
+              <h2 className="mb-4 sm:mb-6 md:mb-7.5">
+                The Prismolix Narrative
+              </h2>
               <p className="fs-20 text-[#7a7a7a]!">
-                Frustrated with the results and high-cost of our digital
-                marketing team, we decided to look offshore. Within 3 months of
-                our first hire, our CAC had reduced by 40%. Then, seeing this
-                success, we were able to drive down our operational labor costs
-                by 22% and increase all critical KPIs. Within 6 months, we had
-                expanded to 7 offshore teammates. After sharing our story, we
-                developed a wait list of other business owners asking us, "Can
-                you help us scale our team the same way?"
+                Dissatisfied with the performance and steep expenses of our
+                online marketing squad, we opted for global sourcing. Within a
+                quarter of our initial recruitment, our acquisition costs
+                dropped by 40%. Following this triumph, we decreased operational
+                overhead by 22% while boosting all vital metrics. By the
+                half-year mark, we grew to seven international colleagues. After
+                detailing our progress, we faced a queue of fellow founders
+                asking, 'Can you assist us in expanding our team similarly?'
               </p>
             </div>
 
             <div className="text-center max-w-220 mx-auto">
-              <h2 className="mb-4 sm:mb-6 md:mb-7.5">Our Vision</h2>
+              <h2 className="mb-4 sm:mb-6 md:mb-7.5">Our Outlook</h2>
               <p className="fs-20 text-[#7a7a7a]!">
-                We believe that sourcing offshore talent is going to be the key
-                competitive advantage for small and medium-sized business
-                owners. The next evolution of Entrepreneurship will be defined
-                by a business’ ability to Leverage Cost-driven Efficiency,
-                Improved Execution with a Team of Global Talent, committed to
-                influencing the outcomes of the local business. We see this
-                future now and we are here to help you capitalize on it too.
+                We maintain that securing global expertise will serve as the
+                primary strategic edge for small and mid-sized founders. The
+                subsequent phase of Enterprise will be marked by a firm’s
+                capacity to harness economic efficiency and superior performance
+                through a worldwide squad, dedicated to driving local business
+                results. We anticipate this shift today and are prepared to
+                assist you in seizing it.
               </p>
             </div>
 
             <div className="text-center max-w-220 mx-auto">
-              <h2 className="mb-4 sm:mb-6 md:mb-7.5">Our Mission</h2>
+              <h2 className="mb-4 sm:mb-6 md:mb-7.5">Our Objective</h2>
               <p className="fs-20 text-[#7a7a7a]!">
-                The next wave of job creation and market expansion will belong
-                to the innovators, the micro-preneurs, the consultants and
-                trades. We are these people. But, what is standing in our way?
-                Access to the resources of the blue chips. We exist to
-                democratize access to incredible offshore talent that will
-                facilitate your business’s growth, capital efficiency, and
-                sustainable success.
+                The upcoming surge of employment and industry growth will be led
+                by the visionaries, the solopreneurs, the specialists, and the
+                skilled experts. We are that community. Yet, what obstructs our
+                progress? The lack of resources typically reserved for corporate
+                giants. We exist to provide universal access to elite global
+                expertise, driving your firm’s expansion, financial
+                optimization, and long-term prosperity.
               </p>
             </div>
           </div>
@@ -73,9 +75,9 @@ const page = () => {
       <FAQ />
 
       <CTA
-        heading={"Ready To Transform Your Business?"}
+        heading={"Prepared to Revolutionize Your Enterprise?"}
         para={
-          "Your full-service partner to streamline talent acquisition, hiring, onboarding, payroll, retention, and compliance."
+          "Your comprehensive recruitment ally to optimize candidate sourcing, hiring, integration, payroll, loyalty, and regulation."
         }
       />
     </>

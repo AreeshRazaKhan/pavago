@@ -12,11 +12,9 @@ const page = () => {
         <div className="container mx-auto">
           <div className="max-w-250 mx-auto">
             <h1 className="text-black! text-center font-inter">
-              Quality Quadrupled, Yet The Cost Is Sliced. Your
-              <span className="text-primary">
-                Risk Free Offshore Recruitment
-              </span>{" "}
-              Solution
+              Efficiency Multiplied, Yet Expenses Reduced. Your
+              <span className="text-primary"> Secure Global Staffing</span>{" "}
+              Strategy
             </h1>
 
             <HiringForm />
@@ -39,11 +37,11 @@ const page = () => {
               What we can do
             </span>
             <h2 className="font-semibold! max-w-175 m-auto text-center">
-              Pavago Can Help You
+              Prismolix Can Assist You
             </h2>
             <p className="fs-20 text-center">
-              Experience the benefits of hiring the top 1% Offshore Talent from
-              Pavago
+              Realize the Advantages of Recruiting Elite 1% Global Experts from
+              Prismolix
             </p>
           </div>
 
@@ -57,10 +55,10 @@ const page = () => {
                       alt=""
                     />
                   </div>
-                  <h3>Cost Savings</h3>
+                  <h3>Financial Efficiency</h3>
                   <p>
-                    Save significantly compared to hiring onshore staff, without
-                    compromising on quality.
+                    Reduce expenses considerably compared to local staffing,
+                    without sacrificing excellence.
                   </p>
                 </div>
               </div>
@@ -73,11 +71,11 @@ const page = () => {
                       alt=""
                     />
                   </div>
-                  <h3>Seamless Integration</h3>
+                  <h3>Fluid Incorporation</h3>
                   <p>
-                    Our professionals work in your time zone and are fluent in
-                    English, ensuring they integrate smoothly into your existing
-                    team.
+                    Our experts operate within your schedule and possess
+                    native-level English proficiency, guaranteeing they blend
+                    naturally into your current squad.
                   </p>
                 </div>
               </div>
@@ -90,10 +88,10 @@ const page = () => {
                       alt=""
                     />
                   </div>
-                  <h3>High-Quality Talent</h3>
+                  <h3>Premier Professionals</h3>
                   <p>
-                    Access top 1% offshore talent experienced in working with
-                    US-based companies.
+                    Gain access to the elite 1% of global experts with a proven
+                    history of collaborating with American organizations.
                   </p>
                 </div>
               </div>
@@ -106,11 +104,11 @@ const page = () => {
                       alt=""
                     />
                   </div>
-                  <h3>Proven Track Record</h3>
+                  <h3>Demonstrated Excellence</h3>
                   <p>
-                    We find people who have a proven track record of success
-                    with US-based companies, delivering outstanding results from
-                    day one.
+                    We identify individuals with a documented history of
+                    achievement with American organizations, providing
+                    exceptional performance from the start.
                   </p>
                 </div>
               </div>
@@ -121,10 +119,10 @@ const page = () => {
 
       <CTA
         heading={
-          "Ready to experience the benefits of Pavago’s top 1% Offshore Talent? Transform your workflow with our cost-effective and high-quality professionals."
+          "Experience elite global experts. Upgrade your workflow with our high-quality, affordable professionals."
         }
         para={
-          "Your full-service offshore recruitment partner to streamline talent acquisition, hiring, onboarding, payroll, retention, and compliance."
+          "Your comprehensive global staffing ally to optimize candidate sourcing, hiring, integration, payroll, loyalty, and regulation."
         }
       />
     </>
