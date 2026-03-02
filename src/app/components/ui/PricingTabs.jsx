@@ -20,7 +20,7 @@ const PricingTabs = () => {
   return (
     <>
       <div className="tabs flex flex-col items-center justify-center">
-        <div className="tabs-inner p-1.5 rounded-[200px] border border-[#0e4dc7]">
+        <div className="tabs-inner p-1.5 rounded-[200px] border border-[#6B1AFF]">
           {tabs.map((tab) => (
             <button
               key={tab.id}

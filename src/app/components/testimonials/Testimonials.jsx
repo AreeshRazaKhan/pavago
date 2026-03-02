@@ -47,12 +47,10 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <>
-      <section className="py-70 px-3 md:px-4 lg:px-5 bg-primary testimonials-section">
+      <section className="py-70 px-3 md:px-4 lg:px-5 bg-[#F2EBFF] testimonials-section">
         <div className="container mx-auto">
           <div className="text-center flex flex-col gap-3.5">
-            <span className="font-poppins text-white font-semibold">
-              Testimonials
-            </span>
+            <span className="font-poppins  font-semibold">Testimonials</span>
 
             <PulseBadge paragraph={"Straight Talk From Biz Owners Like You"} />
           </div>
@@ -70,7 +68,7 @@ const Testimonials = () => {
             >
               {testimonials.map((testimonial) => (
                 <SwiperSlide key={testimonial.id}>
-                  <div className="text-center text-white">
+                  <div className="text-center ">
                     <p className="fs-22">{testimonial.text}</p>
 
                     <div className="flex flex-col items-center gap-4 md:gap-5 mt-5 md:mt-6.5">

@@ -129,7 +129,7 @@ const Membership = () => {
           <div className="text-center mt-13 md:mt-15  lg:mt-20">
             <a
               href="#"
-              className="btn btn-lg btn-primary shadow-[0_5px_50px_#8eb4ff] inline-flex"
+              className="btn btn-lg btn-primary shadow-[0_5px_50px_#B57AFF] inline-flex"
             >
               Find Your Offshore A Player
             </a>

@@ -52,11 +52,11 @@ const Navbar = () => {
   return (
     <header className="fixed top-5 left-0 right-0 w-full z-50 px-3 md:px-4 lg:px-5">
       <div className="container mx-auto">
-        <nav className="flex items-center justify-between bg-[#0e4dc7] ps-5.5 p-3 sm:ps-7.5 rounded-full text-white relative">
+        <nav className="flex items-center justify-between ps-5.5 p-3 sm:ps-7.5 rounded-full text-[#292929] relative navbar">
           {/* Logo */}
           <div className="logo-wrapper max-w-28 sm:max-w-36">
             <a href="/">
-              <img src="/images/navbar_logo.png" alt="Logo" />
+              <img src="/images/logo.webp" alt="Logo" />
             </a>
           </div>
 
@@ -70,13 +70,13 @@ const Navbar = () => {
                 onMouseLeave={() => setActiveMenu(null)}
               >
                 {item.columns ? (
-                  <button className="flex items-center gap-1 hover:text-blue-200 transition-colors">
+                  <button className="flex items-center gap-1 hover:text-[#6B1AFF] transition-colors">
                     {item.title} <ChevronDown size={16} />
                   </button>
                 ) : (
                   <a
                     href={item.path}
-                    className="hover:text-blue-200 transition-colors"
+                    className="hover:text-[#6B1AFF] transition-colors"
                   >
                     {item.title}
                   </a>
@@ -89,7 +89,7 @@ const Navbar = () => {
                       initial={{ opacity: 0, y: 15 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 15 }}
-                      className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[850px] bg-[#0e4dc7] rounded-3xl p-10 shadow-2xl border border-white/10"
+                      className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-212.5 bg-[#6B1AFF] rounded-3xl p-10 shadow-2xl border border-white/10"
                     >
                       <div className="grid grid-cols-4 gap-8">
                         {item.columns.map((col, cIdx) => (

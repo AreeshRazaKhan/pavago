@@ -10,7 +10,7 @@ body {
   font-family: var(--font-inter);
   font-size: 16px;
   font-weight: 400;
-  color: #475467;
+  color: #292929;
 }
 
 img {
@@ -24,7 +24,7 @@ h1 {
   font-size: 86px;
   font-weight: 400;
   line-height: 1.2;
-  color: #0e4dc7;
+  color: #212121;
 }
 
 h2 {
@@ -94,7 +94,7 @@ h6 {
 }
 
 .bg-primary {
-  background: #0e4dc7;
+  background: #6B1AFF;
 }
 
 .bg-iceblue {
@@ -102,7 +102,7 @@ h6 {
 }
 
 .text-primary {
-  color: #0e4dc7;
+  color: #6B1AFF;
 }
 
 .font-poppins {
@@ -129,13 +129,13 @@ h6 {
 }
 
 .btn-primary {
-  background: #0e4dc7;
+  background: #6B1AFF;
   color: #fff
 }
 
 .btn-white {
   background-color: white;
-  color: #0e4dc7;
+  color: #6B1AFF;
 }
 
 .pulse-badge {
@@ -168,7 +168,7 @@ h6 {
 }
 
 .badge-glow {
-  background-color: #0e4dc7;
+  background-color: #6B1AFF;
   border-radius: 10px;
   width: 6px;
   height: 6px;
@@ -245,7 +245,7 @@ h6 {
   color: #fff;
   white-space: nowrap;
   word-break: normal;
-  background-color: #0e4dc7;
+  background-color: #6B1AFF;
   border-radius: 46px;
   justify-content: center;
   align-items: center;
@@ -255,12 +255,29 @@ h6 {
   display: flex;
 }
 
+.gradient-line:before {
+  content: "";
+  background: linear-gradient(90deg, #0000 0%, #0009 50%, #0000 100%) no-repeat;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 
+
+/* NAVBAR SECTION */
+.navbar {
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background: linear-gradient(#fff3 0% 100%), #0000000d;
+}
 
 
 /* HERO SECTION  */
 .hero-section {
-  background: url('/images/hero-section-bg.svg') no-repeat center top, #eaf1fe;
+  background: url('/images/hero-section-bg.svg') no-repeat center top, #F2EBFF;
 }
 
 .hero-section .logo-wrapper {
@@ -272,7 +289,7 @@ h6 {
 
 /* PROCESS HIGHLIGHT */
 .process-highlight-inner {
-  background-image: linear-gradient(#0e4dc7, #1463ff);
+  background-image: linear-gradient(194deg, #6b1aff, #21005e);
 }
 
 
@@ -284,7 +301,7 @@ h6 {
 }
 
 .our-pricing .tabs-inner .tab-btn.active {
-  background: #0e4dc7;
+  background: #6B1AFF;
   color: #fff;
 }
 
@@ -292,7 +309,7 @@ h6 {
 /* TESTIMONIAL SECTION */
 
 .testimonials-section .swiper-navigation-icon {
-  color: white;
+  color: #6B1AFF;
 }
 
 .testimonials-section .swiper-slide {

@@ -17,7 +17,9 @@ export default function Home() {
             <PulseBadge paragraph={"Build Your Dream 'A Team' Today"} />
             <h1 className="mt-6">
               Helping Businesses Build Global Teams With{" "}
-              <span className="font-semibold">A Player Offshore Talent</span>
+              <span className="font-semibold text-primary">
+                A Player Offshore Talent
+              </span>
             </h1>
             <p className="fs-28 mt-6">
               We specialize in offshore recruitment for companies that want
