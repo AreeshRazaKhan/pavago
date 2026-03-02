@@ -95,12 +95,12 @@ export default function Home() {
       <CTA
         heading={
           <>
-            Transform Your Team with Pavago’s{" "}
-            <span className="text-primary">Top 1% Offshore Talent</span>
+            Revolutionize Your Squad with Prismolix’s{" "}
+            <span className="text-primary">Elite 1% Global Experts</span>
           </>
         }
         para={
-          "Your full-service offshore recruitment partner to streamline talent acquisition, hiring, onboarding, payroll, retention, and compliance."
+          "Your comprehensive global staffing ally to optimize candidate sourcing, hiring, integration, payroll, loyalty, and regulation."
         }
       />
 

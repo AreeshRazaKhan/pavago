@@ -52,7 +52,9 @@ const Testimonials = () => {
           <div className="text-center flex flex-col gap-3.5">
             <span className="font-poppins  font-semibold">Testimonials</span>
 
-            <PulseBadge paragraph={"Straight Talk From Biz Owners Like You"} />
+            <PulseBadge
+              paragraph={"Direct Feedback From Business Leaders Like You"}
+            />
           </div>
 
           <div className="mt-50">

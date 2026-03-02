@@ -5,15 +5,27 @@ import { motion, AnimatePresence } from "framer-motion";
 const faqData = [
   {
     id: 1,
-    question: "What roles can I hire through Pavago?",
+    question: "Which positions can I fill through Prismolix?",
     answer:
-      "Whatever roles are remote, we can find. If it can be done remotely, we can recruit for it — including Sales, Marketing, Admin/Operations, Finance, IT & Engineering, Product, and more based on your needs.",
+      "Any role that is remote, we can secure. If it is possible to perform the work digitally, we can staff it — encompassing Sales, Marketing, Admin/Operations, Finance, IT & Engineering, Product, and additional fields based on your requirements.",
   },
   {
     id: 2,
-    question: "Which countries or regions do you source talent from?",
+    question: "From which locations or territories do you recruit experts?",
     answer:
-      "We commonly source talent from Latin America, Pakistan, and South Africa. The best region depends on the role, required time zone overlap, and budget.",
+      "We frequently source professionals from Latin America, Pakistan, and South Africa. The ideal territory is determined by the specific position, necessary schedule alignment, and your financial plan.",
+  },
+  {
+    id: 3,
+    question: "Do candidates truly have experience with American firms?",
+    answer:
+      "We focus on applicants who have a history of collaborating with U.S.-based organizations and can function within American professional standards regarding dialogue, accountability, and performance. You will still conduct the interviews and select the individual you prefer, allowing you to verify the match personally.",
+  },
+  {
+    id: 4,
+    question: "Is the global talent full-time and committed to my company?",
+    answer:
+      "We source remote professionals based on the operational model you require. For specific positions (such as Virtual Assistants), we provide dedicated recruits who function solely within your squad.",
   },
 ];
 
@@ -63,7 +75,7 @@ const FAQ = () => {
                           ease: [0.04, 0.62, 0.23, 0.98],
                         }}
                       >
-                        <p className="p-5 md:p-6 lg:p-7.5 pt-0  fs-18">
+                        <p className="p-5 md:p-6 lg:p-7.5 pt-0!  fs-18">
                           {item.answer}
                         </p>
                       </motion.div>
