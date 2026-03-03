@@ -1,6 +1,7 @@
 import CTA from "../components/cta/CTA";
 import FAQ from "../components/faq/FAQ";
 import Membership from "../components/membership/Membership";
+import HiringModal from "../components/modal/HiringModal";
 import OurProcess from "../components/our-process/OurProcess";
 import OurPricing from "../components/pricing/OurPricing";
 import ProcessHighlight from "../components/process-highlight/ProcessHighlight";
@@ -32,7 +33,7 @@ export default function Home() {
 
             <div className="text-center flex flex-col justify-center items-center">
               <p className="fs-12 text-center mt-8 sm:mt-10">
-                Partner 150+ Organizations Currently Scaling Using Prismolix's
+                Partner 150+ Organizations Currently Scaling Using Prismolix&apos;s
                 Global Staffing Solutions
               </p>
 
@@ -103,6 +104,8 @@ export default function Home() {
           "Your comprehensive global staffing ally to optimize candidate sourcing, hiring, integration, payroll, loyalty, and regulation."
         }
       />
+
+      <HiringModal />
 
       <FAQ />
     </>

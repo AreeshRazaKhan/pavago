@@ -14,7 +14,7 @@ const Membership = () => {
             </h2>
             <p className="fs-20 text-center">
               Recruiting via Prismolix provides more than just obtaining elite
-              global staff. You'll gain from our complete suite of assistance
+              global staff. You&apos;ll gain from our complete suite of assistance
               tools to guarantee your fresh recruits excel and blend perfectly
               into your company.
             </p>

@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, X, Menu } from "lucide-react";
+import { useModal } from "@/context/ModalContext";
+import Link from "next/link";
 
 const menuData = [
   {
@@ -43,6 +45,7 @@ const menuData = [
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const { openHiringModal } = useModal();
 
   // Helper to turn "Sales Dev Rep" into "/find-a-hire/sales-dev-rep"
   const generateSlug = (category, link) => {
@@ -55,9 +58,9 @@ const Navbar = () => {
         <nav className="flex items-center justify-between ps-5.5 p-3 sm:ps-7.5 rounded-full text-[#292929] relative navbar">
           {/* Logo */}
           <div className="logo-wrapper max-w-28 sm:max-w-36">
-            <a href="/">
+            <Link href="/">
               <img src="/images/logo.webp" alt="Logo" />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Menu */}
@@ -121,9 +124,10 @@ const Navbar = () => {
 
           {/* Action Button & Mobile Toggle */}
           <div className="flex items-center gap-4">
-            <button className="hidden lg:block btn btn-white fs-18 font-semibold!">
+            <button onClick={() => openHiringModal(true)} className="hidden lg:block btn btn-white fs-18 font-semibold! cursor-pointer transition active:scale-98">
               Schedule a call
             </button>
+
             <button
               className="lg:hidden"
               onClick={() => setIsMobileOpen(!isMobileOpen)}

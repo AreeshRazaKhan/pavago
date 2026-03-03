@@ -39,7 +39,7 @@ const page = () => {
                 overhead by 22% while boosting all vital metrics. By the
                 half-year mark, we grew to seven international colleagues. After
                 detailing our progress, we faced a queue of fellow founders
-                asking, 'Can you assist us in expanding our team similarly?'
+                asking, &apos;Can you assist us in expanding our team similarly?&apos;
               </p>
             </div>
 

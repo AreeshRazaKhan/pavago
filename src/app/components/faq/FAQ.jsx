@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useModal } from "@/context/ModalContext";
 
 const faqData = [
   {
@@ -31,6 +32,7 @@ const faqData = [
 
 const FAQ = () => {
   const [activeId, setActiveId] = useState(null);
+  const { openHiringModal } = useModal();
 
   const toggleAccordion = (id) => {
     setActiveId(activeId === id ? null : id);
@@ -96,7 +98,7 @@ const FAQ = () => {
                 className="self-end -mt-5 -mb-12.5 translate-x-full h-[65%]! sm:h-[75%]! md:h-[128px]! arrow"
               />
 
-              <button className="btn btn-white font-semibold! cursor-pointer shadow-[0_10px_50px_#b57aff8c]">
+              <button onClick={() => openHiringModal(true)} className="btn btn-white font-semibold! cursor-pointer shadow-[0_10px_50px_#b57aff8c] transition active:scale-98">
                 Schedule a call
               </button>
             </div>

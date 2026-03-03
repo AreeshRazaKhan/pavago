@@ -1,7 +1,9 @@
 import { Inter, Poppins } from "next/font/google";
-import Footer from "./components/layout/Footer";
-import Navbar from "./components/layout/Navbar";
 import "../styles/globals.css";
+import Navbar from "./components/layout/navbar";
+import Footer from "./components/layout/Footer";
+import HiringModal from "./components/modal/HiringModal";
+import { ModalProvider } from "@/context/ModalContext";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
@@ -27,10 +29,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${poppins.variable} ${inter.variable} antialiased`}
       >
-        <Navbar />
-        {children}
-
-        <Footer />
+        <ModalProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ModalProvider>
       </body>
     </html>
   );
