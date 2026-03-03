@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="container mx-auto">
           <div className="flex flex-col items-center gap-7.5">
             <div className="logo-wrapper max-w-40 sm:max-w-50">
-              <img src="/images/logo.png" alt="" />
+              <img src="/images/logo.webp" alt="" />
             </div>
             <div className="flex items-center justify-center gap-4 sm:gap-7.5">
               <a href="#" className="fs-18 text-black!">
