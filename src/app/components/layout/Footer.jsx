@@ -23,35 +23,35 @@ const Footer = () => {
             <div className="flex items-center gap-4 sm:gap-6">
               <a href="#">
                 <img
-                  src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67038ab42d33780dceb0022d_Twitter.svg"
+                  src="/images/Twitter.svg"
                   alt=""
                   className="w-8! h-8! sm:w-9! sm:h-9!"
                 />
               </a>
               <a href="#">
                 <img
-                  src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67038a6aa15fd2cfecf581aa_link3ein.svg"
+                  src="/images/link3ein.svg"
                   alt=""
                   className="w-8! h-8! sm:w-9! sm:h-9!"
                 />
               </a>
               <a href="#">
                 <img
-                  src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67038a6cdda79f74446ea577_insta.svg"
+                  src="/images/insta.svg"
                   alt=""
                   className="w-8! h-8! sm:w-9! sm:h-9!"
                 />
               </a>
               <a href="#">
                 <img
-                  src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67038a6a0051cbea7768c6ad_fb.svg"
+                  src="/images/fb.svg"
                   alt=""
                   className="w-8! h-8! sm:w-9! sm:h-9!"
                 />
               </a>
               <a href="#">
                 <img
-                  src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/6834d76bf55868ebcdedd4a4_youtube.svg"
+                  src="/images/youtube.svg"
                   alt=""
                   className="w-8! h-8! sm:w-9! sm:h-9!"
                 />

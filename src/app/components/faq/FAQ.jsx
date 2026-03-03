@@ -91,9 +91,9 @@ const FAQ = () => {
               <h3 className=" underline font-inter">Still have questions?</h3>
 
               <img
-                src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67038359125260b47d274571_arrow-2.svg"
+                src="/images/curved-arrowsvg.svg"
                 alt=""
-                className="self-end -mt-5 -mb-12.5 translate-x-full h-[65%]! sm:h-[75%]! md:h-auto! arrow"
+                className="self-end -mt-5 -mb-12.5 translate-x-full h-[65%]! sm:h-[75%]! md:h-[128px]! arrow"
               />
 
               <button className="btn btn-white font-semibold! cursor-pointer shadow-[0_10px_50px_#b57aff8c]">
