@@ -102,7 +102,7 @@ const Navbar = () => {
                                 <li key={lIdx}>
                                   <a
                                     href={generateSlug(col.label, linkText)}
-                                    className="text-blue-100/70 hover:text-white transition-colors text-sm block"
+                                    className="text-white hover:text-white transition-colors text-sm block"
                                   >
                                     {linkText}
                                   </a>
