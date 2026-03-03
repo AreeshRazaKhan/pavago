@@ -42,6 +42,13 @@ h3 {
   color: #000
 }
 
+.font-h2 {
+  font-family: var(--font-poppins);
+  font-size: 50px;
+  font-weight: 600;
+  color: #000;
+}
+
 /* 
 h4 {
   font-family: var(--font-neue-montreal);
@@ -136,6 +143,24 @@ h6 {
 .btn-white {
   background-color: white;
   color: #6B1AFF;
+}
+
+.category-list-btn {
+  font-family: var(--font-poppins);
+  font-size: 14px;
+  padding: 8px 12px;
+  border: 1px solid #767676;
+  color: #767676;
+  border-radius: 100px;
+  display: inline-flex;
+  line-height: 1.4;
+  background-color: transparent;
+  transition: all 0.15s ease-in;
+}
+
+.category-list-btn:hover {
+  background-color: #6B1AFF;
+  color: #fff;
 }
 
 .pulse-badge {
