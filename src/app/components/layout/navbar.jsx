@@ -123,7 +123,7 @@ const Navbar = () => {
                       <div key={cIdx}>
                         <Link
                           href={`/${col.slug}`}
-                          className="font-bold mb-7.5 text-white! block hover:underline fs-22"
+                          className="font-bold mb-7.5 text-white! block hover:underline fs-22 leading-tight"
                           onClick={() => setActiveMenu(null)}
                         >
                           {col.label}

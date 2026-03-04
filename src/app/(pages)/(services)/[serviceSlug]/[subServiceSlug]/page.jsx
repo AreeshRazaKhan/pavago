@@ -1,35 +1,24 @@
-"use client";
+import React from "react";
 import CTA from "@/app/components/cta/CTA";
 import FAQ from "@/app/components/faq/FAQ";
 import OurPricing from "@/app/components/pricing/OurPricing";
 import Testimonials from "@/app/components/testimonials/Testimonials";
 import HiringForm from "@/app/components/ui/HiringForm";
-import { useModal } from "@/context/ModalContext";
-import React, { useEffect, useState } from "react";
+import HiringButton from "@/app/components/ui/HiringButton";
 import { getSingleSubService } from "@/services/services.service";
-import SubServiceSkeleton from "@/app/components/ui/SubServiceSkeleton";
 
-const Page = ({ params }) => {
-  const { openHiringModal } = useModal();
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+const Page = async ({ params }) => {
+  const { subServiceSlug } = await params;
 
-  useEffect(() => {
-    const fetchData = async () => {
-      // Next.js client side par params ko unwrap karna
-      const { subServiceSlug } = await params;
-      const result = await getSingleSubService(subServiceSlug);
-      setData(result);
-      setLoading(false);
-    };
-    fetchData();
-  }, [params]);
+  const data = await getSingleSubService(subServiceSlug);
 
-  // professional skeleton for smooth loading
-  if (loading) return <SubServiceSkeleton />;
-
-  if (!data)
-    return <div className="pt-40 text-center">Service details not found.</div>;
+  if (!data) {
+    return (
+      <div className="pt-40 text-center font-h2">
+        Service details not found.
+      </div>
+    );
+  }
 
   const { acf } = data;
 
@@ -58,12 +47,9 @@ const Page = ({ params }) => {
               <p className="fs-20 mt-10" id="firstSectionParagraph">
                 {acf?.first_section_paragraph}
               </p>
-              <button
-                onClick={() => openHiringModal(true)}
-                className="btn btn-primary font-semibold! cursor-pointer  mt-10"
-              >
+              <HiringButton className="btn btn-primary font-semibold! cursor-pointer mt-10">
                 Start Hiring
-              </button>
+              </HiringButton>
             </div>
 
             <div className="w-full lg:w-2/5">
@@ -102,12 +88,9 @@ const Page = ({ params }) => {
                   </li>
                 ))}
               </ul>
-              <button
-                onClick={() => openHiringModal(true)}
-                className="btn btn-primary font-semibold! cursor-pointer  mt-10"
-              >
+              <HiringButton className="btn btn-primary font-semibold! cursor-pointer mt-10">
                 Start Hiring
-              </button>
+              </HiringButton>
             </div>
           </div>
         </div>
@@ -119,7 +102,7 @@ const Page = ({ params }) => {
       <section className="px-3 md:px-4 lg:px-5 py-70">
         <div className="container mx-auto">
           <div className="flex flex-col items-center justify-center gap-3.5 max-w-200 mx-auto">
-            <h2 className="font-semibold!  m-auto text-center">
+            <h2 className="font-semibold! m-auto text-center">
               Beyond Offshore Recruitment: Our Ecosystem for Your Long-Term
               Success
             </h2>
@@ -134,66 +117,41 @@ const Page = ({ params }) => {
 
           <div className="mt-50">
             <div className="flex justify-center gap-y-3 md:gap-y-4 lg:gap-y-5 flex-wrap xl:-mx-5">
-              <div className="w-full md:w-1/2 lg:w-1/3 px-0 xl:px-5 ">
-                <div className="card p-5 flex flex-col items-center  gap-3 md:gap-4 text-center">
-                  <div className="img-wrapper w-13.25">
-                    <img src="/images/save-cost.svg" alt="" />
+              {[
+                {
+                  img: "save-cost.svg",
+                  title: "Simplified Compensation",
+                  p: "Forget about the stresses of payroll. We process all payments, so you can focus on building your business.",
+                },
+                {
+                  img: "save-time.svg",
+                  title: "Regulatory Confidence",
+                  p: "Remain compliant with all necessary regulations without the worry. We handle all of the legalities for you.",
+                },
+                {
+                  img: "badge.svg",
+                  title: "Continuous Upskilling",
+                  p: `Your new remote ${data.title.rendered} will receive ongoing coaching to stay atop of market shifts.`,
+                },
+                {
+                  img: "bolt.svg",
+                  title: "Committed Assistance",
+                  p: "Enjoy peace of mind with our committed support staff, ready to help you at every stage.",
+                },
+              ].map((card, i) => (
+                <div
+                  key={i}
+                  className="w-full md:w-1/2 lg:w-1/3 px-0 xl:px-5 mb-5"
+                >
+                  <div className="card p-5 flex flex-col items-center gap-3 md:gap-4 text-center h-full">
+                    <div className="img-wrapper w-13.25">
+                      <img src={`/images/${card.img}`} alt={card.title} />
+                    </div>
+                    <h3>{card.title}</h3>
+                    <p>{card.p}</p>
                   </div>
-
-                  <h3>Simplified Compensation</h3>
-
-                  <p>
-                    Forget about the stresses of payroll. We process all
-                    payments, so you can focus on building your business.
-                  </p>
                 </div>
-              </div>
-
-              <div className="w-full md:w-1/2 lg:w-1/3 px-0 xl:px-5">
-                <div className="card p-5 flex flex-col items-center  gap-3 md:gap-4 text-center">
-                  <div className="img-wrapper w-13.25">
-                    <img src="/images/save-time.svg" alt="" />
-                  </div>
-
-                  <h3>Regulatory Confidence</h3>
-
-                  <p>
-                    Remain compliant with all necessary regulations without the
-                    worry. We handle all of the legalities for you.
-                  </p>
-                </div>
-              </div>
-
-              <div className="w-full md:w-1/2 lg:w-1/3 px-0 xl:px-5 ">
-                <div className="card p-5 flex flex-col items-center  gap-3 md:gap-4 text-center">
-                  <div className="img-wrapper w-13.25">
-                    <img src="/images/badge.svg" alt="" />
-                  </div>
-
-                  <h3>Continuous Upskilling</h3>
-
-                  <p>
-                    Your new remote {data.title.rendered} will receive ongoing
-                    coaching to stay atop of market shifts and enhance their
-                    talents.
-                  </p>
-                </div>
-              </div>
-
-              <div className="w-full md:w-1/2 lg:w-1/3 px-0 xl:px-5 ">
-                <div className="card p-5 flex flex-col items-center  gap-3 md:gap-4 text-center">
-                  <div className="img-wrapper w-13.25">
-                    <img src="/images/bolt.svg" alt="" />
-                  </div>
-
-                  <h3>Committed Assistance</h3>
-
-                  <p>
-                    Enjoy peace of mind with our committed support staff, ready
-                    to help you and your talent at every stage.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

@@ -1,15 +1,26 @@
 const BASE_URL = "https://prismolix-tahaateebkhanzada3.wasmer.app/?rest_route=";
 
 /**
+ * Helper function to decode HTML entities from WordPress strings
+ */
+const decodeHTML = (str) => {
+  if (!str) return "";
+  return str.replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#039;/g, "'");
+};
+
+/**
  * Fetches and organizes WordPress data for the Mega Menu.
  * Returns an array of categories, each containing its associated sub-services.
  */
 export const getMegaMenuData = async () => {
   try {
     // 1. Fetch all Categories (Service Groups) from WordPress
-    // We use per_page=100 to ensure we get all groups in one call
     const catRes = await fetch(`${BASE_URL}/wp/v2/service_groups&per_page=100`, {
-      next: { revalidate: 3600 }, // Cache for 1 hour
+      next: { revalidate: 3600 },
     });
     const categories = await catRes.json();
 
@@ -19,14 +30,16 @@ export const getMegaMenuData = async () => {
     });
     const allServices = await serviceRes.json();
 
-    // 3. Map the data: Group each sub-service under its parent Category ID
+    // 3. Map the data with Decoding
     const structuredMenu = categories.map((cat) => ({
-      label: cat.name,
+      // Decode the Category Name (e.g., IT &amp; Engineering -> IT & Engineering)
+      label: decodeHTML(cat.name),
       slug: cat.slug,
       links: allServices
         .filter((service) => service.service_groups.includes(cat.id))
         .map((s) => ({
-          name: s.title.rendered,
+          // Decode the Sub-Service Name
+          name: decodeHTML(s.title.rendered),
           slug: s.slug,
         })),
     }));
@@ -34,6 +47,6 @@ export const getMegaMenuData = async () => {
     return structuredMenu;
   } catch (error) {
     console.error("Error fetching Mega Menu data:", error);
-    return []; // Return empty array on failure to prevent app crash
+    return [];
   }
 };
