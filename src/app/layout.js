@@ -1,7 +1,6 @@
 import { Inter, Poppins } from "next/font/google";
 import "../styles/globals.css";
 import Footer from "./components/layout/Footer";
-import HiringModal from "./components/modal/HiringModal";
 import { ModalProvider } from "@/context/ModalContext";
 import Navbar from "./components/layout/Navbar";
 
