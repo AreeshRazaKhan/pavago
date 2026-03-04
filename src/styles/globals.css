@@ -378,6 +378,10 @@ h6 {
     font-size: 22px;
   }
 
+  .font-h2 {
+    font-size: 45px;
+  }
+
   .fs-18 {
     font-size: 17px !important;
   }
@@ -439,6 +443,10 @@ h6 {
     font-size: 20px;
   }
 
+  .font-h2 {
+    font-size: 38px;
+  }
+
   .fs-18 {
     font-size: 16px !important;
   }
@@ -489,6 +497,10 @@ h6 {
 
   h1 {
     font-size: 45px;
+  }
+
+  .font-h2 {
+    font-size: 35px;
   }
 
   .fs-28 {
@@ -552,6 +564,10 @@ h6 {
 
   h1 {
     font-size: 38px;
+  }
+
+  .font-h2 {
+    font-size: 30px;
   }
 
   .fs-28 {

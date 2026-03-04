@@ -47,7 +47,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto">
         {/* Added 'relative' to nav so the absolute menu positions against it */}
-        <nav className="flex items-center justify-between ps-5.5 p-3 sm:ps-7.5 rounded-full text-[#292929] relative navbar">
+        <nav className="flex items-center justify-between p-4 px-5 lg:p-3 lg:ps-5.5 rounded-full text-[#292929] relative navbar">
           {/* Logo */}
           <div className="logo-wrapper max-w-28 sm:max-w-36">
             <Link href="/" onClick={() => setActiveMenu(null)}>
