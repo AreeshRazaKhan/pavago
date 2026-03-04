@@ -1,9 +1,9 @@
 import { Inter, Poppins } from "next/font/google";
 import "../styles/globals.css";
-import Navbar from "./components/layout/navbar";
 import Footer from "./components/layout/Footer";
 import HiringModal from "./components/modal/HiringModal";
 import { ModalProvider } from "@/context/ModalContext";
+import Navbar from "./components/layout/Navbar";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],

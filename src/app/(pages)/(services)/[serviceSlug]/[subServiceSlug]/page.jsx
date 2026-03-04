@@ -5,26 +5,44 @@ import OurPricing from "@/app/components/pricing/OurPricing";
 import Testimonials from "@/app/components/testimonials/Testimonials";
 import HiringForm from "@/app/components/ui/HiringForm";
 import { useModal } from "@/context/ModalContext";
-import { Cat } from "lucide-react";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getSingleSubService } from "@/services/services.service";
+import SubServiceSkeleton from "@/app/components/ui/SubServiceSkeleton";
 
-const page = () => {
+const Page = ({ params }) => {
   const { openHiringModal } = useModal();
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      // Next.js client side par params ko unwrap karna
+      const { subServiceSlug } = await params;
+      const result = await getSingleSubService(subServiceSlug);
+      setData(result);
+      setLoading(false);
+    };
+    fetchData();
+  }, [params]);
+
+  // professional skeleton for smooth loading
+  if (loading) return <SubServiceSkeleton />;
+
+  if (!data)
+    return <div className="pt-40 text-center">Service details not found.</div>;
+
+  const { acf } = data;
 
   return (
     <>
       <section className="pt-32 sm:pt-40 lg:pt-45 pb-20 px-3 md:px-4 lg:px-5 about-hero-section bg-[#f2ebff]! bg-[url('/images/hero-section-bg.svg')]! bg-top bg-no-repeat">
         <div className="container mx-auto">
           <div className="max-w-250 mx-auto">
-            <h1 className="font-h2 text-center">
-              You Don't Need to Pay $125,000/yr for a Remote Product Designer
+            <h1 className="font-h2 text-center" id="mainTitle">
+              {acf?.main_title || data.title.rendered}
             </h1>
-            <p className="text-center fs-22 mt-6">
-              The average salary of a product designer in the U.S. is
-              $125,000/year. Pavago’s offshore recruitment specialists help you
-              hire experienced product designers for small businesses at just
-              30% of the cost, providing expert design management without the
-              heavy price.
+            <p className="text-center fs-22 mt-6" id="mainParagraph">
+              {acf?.main_paragraph}
             </p>
 
             <HiringForm />
@@ -35,13 +53,10 @@ const page = () => {
       <section className="px-3 md:px-4 lg:px-5 py-70">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row justify-between items-center">
-            <div className="w-full lg:w-1/2">
-              <h2>Tired of Overpaying for a Product Designer?</h2>
-              <p className="fs-20 mt-10">
-                Pavago's offshore recruitment services connect you with highly
-                skilled product designers who specialize in digital product
-                design, user experience, and visual storytelling, offering
-                premium talent at a fraction of the local cost.
+            <div className="w-full lg:w-1/2" id="firstSectionTitle">
+              <h2>{acf?.first_section_title}</h2>
+              <p className="fs-20 mt-10" id="firstSectionParagraph">
+                {acf?.first_section_paragraph}
               </p>
               <button
                 onClick={() => openHiringModal(true)}
@@ -52,7 +67,7 @@ const page = () => {
             </div>
 
             <div className="w-full lg:w-2/5">
-              <img src="/images/illustration-1.svg" />
+              <img src="/images/illustration-1.svg" alt="Illustration" />
             </div>
           </div>
         </div>
@@ -62,74 +77,30 @@ const page = () => {
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row justify-between items-center">
             <div className="w-full lg:w-2/5">
-              <img src="/images/illustration-2.svg" />
+              <img src="/images/illustration-2.svg" alt="Illustration" />
             </div>
 
             <div className="w-full lg:w-1/2">
-              <h2>
-                Hiring Offshore Product Designers From Pavago Can Help You
-              </h2>
+              <h2 id="secondSectionTitle">{acf?.second_section_title}</h2>
 
-              <ul className="flex flex-col gap-4 lg:gap-5 w-full text-[#333]! mt-10 fs-18">
-                <li className="flex items-center gap-4">
-                  <div className="img-wrapper min-w-4 w-4 h-4 lg:min-w-6 lg:w-6 lg:h-6">
-                    <img
-                      src="/images/tick.svg"
-                      className="w-full! h-full! object-contain"
-                    />
-                  </div>
-
-                  <div className="flex flex-col">
-                    <span>
-                      Hire industry experts without the local overhead costs
-                    </span>
-                  </div>
-                </li>
-
-                <li className="flex items-center gap-4">
-                  <div className="img-wrapper min-w-4 w-4 h-4 lg:min-w-6 lg:w-6 lg:h-6">
-                    <img
-                      src="/images/tick.svg"
-                      className="w-full! h-full! object-contain"
-                    />
-                  </div>
-
-                  <div className="flex flex-col">
-                    <span>
-                      Hire industry experts without the local overhead costs
-                    </span>
-                  </div>
-                </li>
-
-                <li className="flex items-center gap-4">
-                  <div className="img-wrapper min-w-4 w-4 h-4 lg:min-w-6 lg:w-6 lg:h-6">
-                    <img
-                      src="/images/tick.svg"
-                      className="w-full! h-full! object-contain"
-                    />
-                  </div>
-
-                  <div className="flex flex-col">
-                    <span>
-                      Hire industry experts without the local overhead costs
-                    </span>
-                  </div>
-                </li>
-
-                <li className="flex items-center gap-4">
-                  <div className="img-wrapper min-w-4 w-4 h-4 lg:min-w-6 lg:w-6 lg:h-6">
-                    <img
-                      src="/images/tick.svg"
-                      className="w-full! h-full! object-contain"
-                    />
-                  </div>
-
-                  <div className="flex flex-col">
-                    <span>
-                      Hire industry experts without the local overhead costs
-                    </span>
-                  </div>
-                </li>
+              <ul
+                className="flex flex-col gap-4 lg:gap-5 w-full text-[#333]! mt-10 fs-18"
+                id="secondSectionBullets"
+              >
+                {acf?.second_section_bullets?.map((item, index) => (
+                  <li key={index} className="flex items-center gap-4">
+                    <div className="img-wrapper min-w-4 w-4 h-4 lg:min-w-6 lg:w-6 lg:h-6">
+                      <img
+                        src="/images/tick.svg"
+                        className="w-full! h-full! object-contain"
+                        alt="Tick"
+                      />
+                    </div>
+                    <div className="flex flex-col">
+                      <span>{item.bullets_points}</span>
+                    </div>
+                  </li>
+                ))}
               </ul>
               <button
                 onClick={() => openHiringModal(true)}
@@ -143,7 +114,6 @@ const page = () => {
       </section>
 
       <OurPricing />
-
       <Testimonials />
 
       <section className="px-3 md:px-4 lg:px-5 py-70">
@@ -153,11 +123,12 @@ const page = () => {
               Beyond Offshore Recruitment: Our Ecosystem for Your Long-Term
               Success
             </h2>
+
             <p className="fs-20 text-center">
               Recruiting through Prismolix means more than just acquiring top
               talent. You’ll benefit from our comprehensive ecosystem of support
-              services, ensuring your new remote accountant succeeds and
-              integrates seamlessly into your business operations.
+              services, ensuring your new remote {data.title.rendered} succeeds
+              and integrates seamlessly into your business operations.
             </p>
           </div>
 
@@ -168,7 +139,9 @@ const page = () => {
                   <div className="img-wrapper w-13.25">
                     <img src="/images/save-cost.svg" alt="" />
                   </div>
+
                   <h3>Simplified Compensation</h3>
+
                   <p>
                     Forget about the stresses of payroll. We process all
                     payments, so you can focus on building your business.
@@ -181,7 +154,9 @@ const page = () => {
                   <div className="img-wrapper w-13.25">
                     <img src="/images/save-time.svg" alt="" />
                   </div>
+
                   <h3>Regulatory Confidence</h3>
+
                   <p>
                     Remain compliant with all necessary regulations without the
                     worry. We handle all of the legalities for you.
@@ -194,9 +169,11 @@ const page = () => {
                   <div className="img-wrapper w-13.25">
                     <img src="/images/badge.svg" alt="" />
                   </div>
+
                   <h3>Continuous Upskilling</h3>
+
                   <p>
-                    Your new remote product designer will receive ongoing
+                    Your new remote {data.title.rendered} will receive ongoing
                     coaching to stay atop of market shifts and enhance their
                     talents.
                   </p>
@@ -208,7 +185,9 @@ const page = () => {
                   <div className="img-wrapper w-13.25">
                     <img src="/images/bolt.svg" alt="" />
                   </div>
+
                   <h3>Committed Assistance</h3>
+
                   <p>
                     Enjoy peace of mind with our committed support staff, ready
                     to help you and your talent at every stage.
@@ -230,4 +209,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
