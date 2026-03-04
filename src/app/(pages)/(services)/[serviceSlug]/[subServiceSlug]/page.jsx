@@ -6,6 +6,7 @@ import Testimonials from "@/app/components/testimonials/Testimonials";
 import HiringForm from "@/app/components/ui/HiringForm";
 import HiringButton from "@/app/components/ui/HiringButton";
 import { getSingleSubService } from "@/services/services.service";
+import HiringModal from "@/app/components/modal/HiringModal";
 
 const Page = async ({ params }) => {
   const { subServiceSlug } = await params;
@@ -163,6 +164,8 @@ const Page = async ({ params }) => {
         heading={"Ready to Scale Your Vision with Top-Tier Offshore Talent?"}
         para={"Schedule Your Complimentary Consultation Today!"}
       />
+
+      <HiringModal />
     </>
   );
 };

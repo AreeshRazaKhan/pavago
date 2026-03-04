@@ -4,6 +4,7 @@ import Testimonials from "@/app/components/testimonials/Testimonials";
 import HiringForm from "@/app/components/ui/HiringForm";
 import PricingTabs from "@/app/components/ui/PricingTabs";
 import "../../../styles/globals.css";
+import HiringModal from "@/app/components/modal/HiringModal";
 
 const page = () => {
   return (
@@ -113,6 +114,8 @@ const page = () => {
           "Your comprehensive global staffing ally to optimize candidate sourcing, hiring, integration, payroll, loyalty, and regulation."
         }
       />
+
+      <HiringModal />
     </>
   );
 };

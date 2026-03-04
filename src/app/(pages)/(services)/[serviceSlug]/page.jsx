@@ -7,6 +7,7 @@ import {
   getServiceCategory,
   getSubServicesByCategoryId,
 } from "@/services/services.service";
+import HiringModal from "@/app/components/modal/HiringModal";
 
 const page = async ({ params }) => {
   const { serviceSlug } = await params;
@@ -66,6 +67,8 @@ const page = async ({ params }) => {
       <CTA heading={acf?.cta_heading} para={acf?.cta_paragraph} />
       <OurPricing />
       <FAQ />
+
+      <HiringModal />
     </>
   );
 };

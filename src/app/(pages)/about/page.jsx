@@ -1,5 +1,6 @@
 import CTA from "@/app/components/cta/CTA";
 import FAQ from "@/app/components/faq/FAQ";
+import HiringModal from "@/app/components/modal/HiringModal";
 import HiringForm from "@/app/components/ui/HiringForm";
 import React from "react";
 
@@ -39,7 +40,8 @@ const page = () => {
                 overhead by 22% while boosting all vital metrics. By the
                 half-year mark, we grew to seven international colleagues. After
                 detailing our progress, we faced a queue of fellow founders
-                asking, &apos;Can you assist us in expanding our team similarly?&apos;
+                asking, &apos;Can you assist us in expanding our team
+                similarly?&apos;
               </p>
             </div>
 
@@ -80,6 +82,8 @@ const page = () => {
           "Your comprehensive recruitment ally to optimize candidate sourcing, hiring, integration, payroll, loyalty, and regulation."
         }
       />
+
+      <HiringModal />
     </>
   );
 };

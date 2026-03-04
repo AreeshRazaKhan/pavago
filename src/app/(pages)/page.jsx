@@ -33,8 +33,8 @@ export default function Home() {
 
             <div className="text-center flex flex-col justify-center items-center">
               <p className="fs-12 text-center mt-8 sm:mt-10">
-                Partner 150+ Organizations Currently Scaling Using Prismolix&apos;s
-                Global Staffing Solutions
+                Partner 150+ Organizations Currently Scaling Using
+                Prismolix&apos;s Global Staffing Solutions
               </p>
 
               {/* <div className="mt-12.5 flex items-center justify-center gap-3 sm:gap-5 md:gap-7.5">
