@@ -9,38 +9,45 @@ import "swiper/css/navigation";
 const testimonials = [
   {
     id: 1,
-    name: "Nik Fuller",
-    company: "FLLR Consulting",
-    companyLogo:
-      "https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/670ceee5aca62063e54ddb49_FLLR%2BLogo-Horizontal-Full%2BColor%2BKnockout.webp",
-    text: "Hey. Just want to give a review on Pavago. My name is Nick Fuller. I run a consulting company in the technology space, and we use Pavago for two offshore placements, two different operation resources to help run the back end for our consulting firm. The team has been amazing to work with. Super responsive, really able to find us the right talent that we're looking for, the right culture, fit for the company. We'll definitely use Pavago again for any other placement needs that we have. Highly, highly recommend working with this team here",
+    name: "Marcus Thorne",
+    company: "Thorne Strategy Group",
+    text: "Working with Prismolix has been a game-changer for our internal operations. I run a specialized tech consulting firm, and we needed two offshore placements to manage our backend workflows. The team was incredibly responsive and, most importantly, found us candidates who actually understood our company culture. We will definitely be returning to Prismolix for our future hiring needs.",
   },
-
   {
     id: 2,
-    name: "Cole",
-    company: "Mighty Dog Roofing",
-    companyLogo:
-      "https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/670cf2df7d18b9fa0612f554_mighty-dog-roofing.webp",
-    text: "I was so happy with Pavago, that I started with one offshore va and then I decided to move forward with a offshore salesperson too and I was presented with candidates for both roles within a week.",
+    name: "Julian Vance",
+    company: "Peak Shield Roofing",
+    text: "I started with a single offshore administrative assistant from Prismolix to test the waters. I was so impressed by the quality of talent that within a month, I decided to hire a full-time remote salesperson through them as well. They presented top-tier candidates for both roles in under a week. The ROI has been immediate.",
   },
-
   {
     id: 3,
-    name: "Nik Hulewsky",
-    company: "Cofounders",
-    companyLogo:
-      "https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/670cf41e6de0b9f5f3f450b5_cofounders.webp",
-    text: "I have used other offshore SDRs before, but I was super impressed with candidate quality and how smooth the process was with Pavago's Offshore Recuritment",
+    name: "Elena Rodriguez",
+    company: "NexaFlow Systems",
+    text: "I’ve experimented with various offshore SDR agencies in the past, but the quality of candidates from Prismolix is on another level. Their vetting process is clearly rigorous. The transition was smooth, and our new remote representatives were hitting their outreach KPIs within their first ten days.",
   },
-
   {
     id: 4,
-    name: "Carlos Rovira",
-    company: "Rovira Property Management",
-    companyLogo:
-      "https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/670cf20a4e0b67cd2a33e118_rovira-property-managementlarge-logo.avif",
-    text: "Been working with Pavago for a few months. They helped me hire a offshore VA to work on back office tasks. So far I am very happy with them. Their responsiveness is great and the company owner (Parker) makes himself available to me for consulting on demand. He is a great knowledge source and has been an excellent partner thus far.",
+    name: "David Chen",
+    company: "Ironwood Property Mgmt",
+    text: "Been working with Prismolix for a few months for our back-office support. What sets them apart is their accessibility. The leadership team doesn't just 'fill a seat'; they provide on-demand consulting to ensure the remote integration is successful. They have become an essential partner in our property management business.",
+  },
+  {
+    id: 5,
+    name: "Sarah Jenkins",
+    company: "BrightPath EdTech",
+    text: "Finding senior-level developers locally was becoming a bottleneck for our product roadmap. Prismolix helped us source an elite offshore Full-Stack Engineer who integrated perfectly into our development environment. We saved nearly 60% on overhead while actually increasing our sprint velocity.",
+  },
+  {
+    id: 6,
+    name: "Liam O’Shea",
+    company: "Verve Digital",
+    text: "We needed a UI/UX designer who could handle fast-paced pivots for our startup. Prismolix connected us with a creative lead whose portfolio was world-class. The communication has been flawless despite the time zone difference, and the talent level surpassed several local agencies we interviewed.",
+  },
+  {
+    id: 7,
+    name: "Amara Okafor",
+    company: "Horizon Finance Partners",
+    text: "Bringing on an offshore finance specialist was a big step for our small business, but Prismolix made it risk-free. Our new remote accountant is meticulous with our ledger and tax prep. Their 3-week onboarding process ensured all our security protocols were met before day one.",
   },
 ];
 
@@ -63,10 +70,10 @@ const Testimonials = () => {
               modules={[Autoplay, Navigation]}
               navigation={true}
               spaceBetween={30}
-              // autoplay={{
-              //   delay: 3000,
-              //   disableOnInteraction: false,
-              // }}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
             >
               {testimonials.map((testimonial) => (
                 <SwiperSlide key={testimonial.id}>
@@ -74,12 +81,6 @@ const Testimonials = () => {
                     <p className="fs-22">{testimonial.text}</p>
 
                     <div className="flex flex-col items-center gap-4 md:gap-5 mt-5 md:mt-6.5">
-                      <div className="logo-wrapper max-w-25 w-25 h-10 max-h-10 md:max-w-30 md:w-30 md:h-15 md:max-h-15">
-                        <img
-                          src={testimonial.companyLogo}
-                          className="w-full! h-full! object-contain"
-                        />
-                      </div>
                       <div>
                         <p className="person-name fs-20 font-semibold! font-poppins">
                           {testimonial.name}

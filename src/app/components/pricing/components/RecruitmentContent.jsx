@@ -1,4 +1,5 @@
 import React from "react";
+import HiringButton from "../../ui/HiringButton";
 
 const RecruitmentContent = () => {
   return (
@@ -89,9 +90,9 @@ const RecruitmentContent = () => {
             Per Candidate <span className="font-bold">$329</span>/Month
           </h3>
 
-          <a href="#" className="w-full btn btn-lg btn-white">
+          <HiringButton className="w-full btn btn-lg btn-white font-semibold! cursor-pointer mt-10">
             Secure Your Global Elite
-          </a>
+          </HiringButton>
         </div>
 
         <div className="max-w-125 w-full bg-white px-6 py-9 lg:p-9 rounded-[28px] gap-7 lg:gap-9.5 flex flex-col items-center shadow-[0_5px_50px_#0000001a]">
@@ -161,9 +162,9 @@ const RecruitmentContent = () => {
 
           <h3 className="text-primary font-semibold!">Recruitment Only</h3>
 
-          <a href="#" className="w-full btn btn-lg btn-primary">
+          <HiringButton className="w-full btn btn-lg btn-primary font-semibold! cursor-pointer mt-10">
             Secure Your Global Elite
-          </a>
+          </HiringButton>
         </div>
       </div>
     </>

@@ -1,4 +1,5 @@
 import React from "react";
+import HiringButton from "../../ui/HiringButton";
 
 const BundlesContent = () => {
   return (
@@ -52,9 +53,9 @@ const BundlesContent = () => {
 
           <hr className="w-full text-primary" />
 
-          <a href="#" className="w-full btn btn-lg btn-primary">
+          <HiringButton className="w-full btn btn-lg btn-primary font-semibold! cursor-pointer mt-10">
             Get Started
-          </a>
+          </HiringButton>
         </div>
       </div>
     </>

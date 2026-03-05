@@ -1,4 +1,5 @@
 import React from "react";
+import HiringButton from "../ui/HiringButton";
 
 const Membership = () => {
   return (
@@ -14,9 +15,9 @@ const Membership = () => {
             </h2>
             <p className="fs-20 text-center">
               Recruiting via Prismolix provides more than just obtaining elite
-              global staff. You&apos;ll gain from our complete suite of assistance
-              tools to guarantee your fresh recruits excel and blend perfectly
-              into your company.
+              global staff. You&apos;ll gain from our complete suite of
+              assistance tools to guarantee your fresh recruits excel and blend
+              perfectly into your company.
             </p>
           </div>
 
@@ -110,12 +111,9 @@ const Membership = () => {
           </div>
 
           <div className="text-center mt-13 md:mt-15  lg:mt-20">
-            <a
-              href="#"
-              className="btn btn-lg btn-primary shadow-[0_5px_50px_#B57AFF] inline-flex"
-            >
+            <HiringButton className="btn btn-lg btn-primary shadow-[0_5px_50px_#B57AFF] inline-flex cursor-pointer">
               Secure Your Global Elite
-            </a>
+            </HiringButton>
           </div>
         </div>
       </section>
