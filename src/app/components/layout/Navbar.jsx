@@ -34,6 +34,7 @@ const Navbar = () => {
     { title: "Find a Hire", columns: dynamicServices },
     { title: "About Us", path: "/about" },
     { title: "Pricing", path: "/pricing" },
+    { title: "Privacy Policies", path: "/privacy-policy" },
   ];
 
   const handleMenuClick = (idx) => {

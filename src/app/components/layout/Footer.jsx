@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -10,14 +11,14 @@ const Footer = () => {
               <img src="/images/logo.webp" alt="" />
             </div>
             <div className="flex items-center justify-center gap-4 sm:gap-7.5">
-              <a href="#" className="fs-18 text-black!">
+              <Link href={"/terms-&-conditions"} className="fs-18 text-black!">
                 Terms & Conditions
-              </a>
+              </Link>
               <div className="fs-18 text-black!">|</div>
 
-              <a href="#" className="fs-18 text-black!">
+              <Link href={"/privacy-policy"} className="fs-18 text-black!">
                 Privacy Policy
-              </a>
+              </Link>
             </div>
 
             <div className="flex items-center gap-4 sm:gap-6">

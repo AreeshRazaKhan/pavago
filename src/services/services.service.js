@@ -11,7 +11,7 @@ export const getServiceCategory = async (slug) => {
 
 // 2. Fetch All Sub-Services for a specific Category ID
 export const getSubServicesByCategoryId = async (categoryId) => {
-  const res = await fetch(`${BASE_URL}/wp/v2/services&service_groups=${categoryId}`, {
+  const res = await fetch(`${BASE_URL}/wp/v2/services&service_groups=${categoryId}&per_page=100`, {
     next: { revalidate: 3600 },
   });
   return await res.json();
