@@ -1,13 +1,20 @@
 "use client";
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import toast from 'react-hot-toast';
 import { HiringFormData } from "@/server/actions";
+import { useModal } from "@/context/ModalContext";
 
 const HiringForm = () => {
 
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
+
+
+  // modal state
+
+  const { isHiringModalOpen, closeHiringModal } = useModal();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,9 +33,16 @@ const HiringForm = () => {
       setError("");
 
       const response = await HiringFormData(formData);
+
       if (response.status === "mail_sent") {
-        alert("Thank you for your interest! We will get back to you soon.");
-        setEmail("");
+
+        setSuccess(true);
+
+        if (isHiringModalOpen) {
+          closeHiringModal();
+          toast.success('Successfully submitted!');
+        }
+
       } else {
         setError(response.message || "An unexpected error has occurred, please try again.");
       }
@@ -45,9 +59,11 @@ const HiringForm = () => {
 
   return (
     <>
+ 
       <div className="form-wrapper p-1.5 max-w-187.5 rounded-[200px] border border-[#6B1AFF] w-full mx-auto mt-8 sm:mt-11 lg:mt-14">
         <form className="form-inner flex items-center bg-white overflow-hidden rounded-[200px]" onSubmit={handleSubmit}>
           <input
+            disabled={loading || success}
             value={email}
             onInput={(e) => setEmail(e.target.value)}
             type="email"
@@ -57,13 +73,14 @@ const HiringForm = () => {
           />
           <div className="flex">
             <button
-              disabled={loading}
-              type="submit" className="form-btn cursor-pointer">
+              disabled={loading || success}
+              type="submit" className="form-btn cursor-pointer disabled:cursor-default disabled:opacity-85">
               {loading ? "Submitting..." : "Start Hiring"}
             </button>
           </div>
         </form>
       </div>
+      {success && <p className="text-green-500 text-sm mt-1.5">Thank you for your message. It has been sent.</p>}
       {error && <p className="text-red-500 text-sm mt-1.5">{error}</p>}
     </>
   );

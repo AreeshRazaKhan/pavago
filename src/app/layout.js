@@ -3,6 +3,8 @@ import "../styles/globals.css";
 import Footer from "./components/layout/Footer";
 import { ModalProvider } from "@/context/ModalContext";
 import Navbar from "./components/layout/Navbar";
+import { Toaster } from 'react-hot-toast';
+
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
@@ -47,6 +49,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${poppins.variable} ${inter.variable} antialiased`}
       >
+        <Toaster />
         <ModalProvider>
           <Navbar />
           {children}
