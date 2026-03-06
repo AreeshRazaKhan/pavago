@@ -1,4 +1,4 @@
-const BASE_URL = "https://prismolix-tahaateebkhanzada3.wasmer.app/?rest_route=";
+const BASE_URL = "https://api.prismolix.com/?rest_route=";
 
 /**
  * Helper function to decode HTML entities from WordPress strings

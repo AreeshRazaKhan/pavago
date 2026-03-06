@@ -4,7 +4,7 @@ export async function HiringFormData(formData) {
     formData.append("_wpcf7_unit_tag", "875fde8");
     try {
         const response = await fetch(
-            "https://prismolix-tahaateebkhanzada3.wasmer.app/wp-json/contact-form-7/v1/contact-forms/52/feedback",
+            "https://api.prismolix.com/wp-json/contact-form-7/v1/contact-forms/52/feedback",
             {
                 method: "POST",
                 body: formData,

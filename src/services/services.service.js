@@ -1,4 +1,4 @@
-const BASE_URL = "https://prismolix-tahaateebkhanzada3.wasmer.app/?rest_route=";
+const BASE_URL = "https://api.prismolix.com/?rest_route=";
 
 // 1. Fetch Main Service (Taxonomy/Category) Details
 export const getServiceCategory = async (slug) => {
