@@ -4,6 +4,7 @@ import Footer from "./components/layout/Footer";
 import { ModalProvider } from "@/context/ModalContext";
 import Navbar from "./components/layout/Navbar";
 import { Toaster } from 'react-hot-toast';
+import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google'
 
 
 const poppins = Poppins({
@@ -46,6 +47,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="GTM-MMWN2PNF" />
       <body
         className={`${poppins.variable} ${inter.variable} antialiased`}
       >
@@ -55,6 +57,8 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </ModalProvider>
+
+        <GoogleAnalytics gaId="G-VTDWGDH90L" />
       </body>
     </html>
   );
