@@ -4,6 +4,31 @@ import HiringModal from "@/app/components/modal/HiringModal";
 import HiringForm from "@/app/components/ui/HiringForm";
 import React from "react";
 
+export const metadata = {
+  title:
+    "About Prismolix | Leading Global Recruitment & Talent Sourcing Agency",
+  description:
+    "Learn how Prismolix bridges the gap between top global talent and growing businesses. Discover our mission to simplify offshore hiring. Read our story and join us.",
+  alternates: {
+    canonical: "https://www.prismolix.com/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://prismolix.com",
+    title:
+      "About Prismolix | Leading Global Recruitment & Talent Sourcing Agency",
+    description:
+      "Learn how Prismolix bridges the gap between top global talent and growing businesses. Discover our mission to simplify offshore hiring. Read our story and join us.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "About Prismolix | Leading Global Recruitment & Talent Sourcing Agency",
+    description:
+      "Learn how Prismolix bridges the gap between top global talent and growing businesses. Discover our mission to simplify offshore hiring. Read our story and join us.",
+  },
+};
+
 const page = () => {
   return (
     <>

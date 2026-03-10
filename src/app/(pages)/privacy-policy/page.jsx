@@ -1,6 +1,28 @@
 import React from "react";
 import "@/styles/blog.css";
 
+export const metadata = {
+  title: "Privacy Policy | How Prismolix Protects Your Personal Data",
+  description:
+    "Your privacy is our priority. Read the Prismolix privacy policy to understand how we collect, use, and secure your data during recruitment. Learn more about your rights.",
+  alternates: {
+    canonical: "https://www.prismolix.com/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://prismolix.com",
+    title: "Privacy Policy | How Prismolix Protects Your Personal Data",
+    description:
+      "Your privacy is our priority. Read the Prismolix privacy policy to understand how we collect, use, and secure your data during recruitment. Learn more about your rights.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | How Prismolix Protects Your Personal Data",
+    description:
+      "Your privacy is our priority. Read the Prismolix privacy policy to understand how we collect, use, and secure your data during recruitment. Learn more about your rights.",
+  },
+};
+
 const page = () => {
   return (
     <>

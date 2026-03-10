@@ -2,6 +2,28 @@ import React from "react";
 import "@/styles/blog.css";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Terms & Conditions | Official Service Agreement - Prismolix",
+  description:
+    "Review the official terms and conditions for using Prismolix services. Understand our recruitment policies and legal guidelines. Read the full terms here.",
+  alternates: {
+    canonical: "https://www.prismolix.com/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://prismolix.com",
+    title: "Terms & Conditions | Official Service Agreement - Prismolix",
+    description:
+      "Review the official terms and conditions for using Prismolix services. Understand our recruitment policies and legal guidelines. Read the full terms here.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms & Conditions | Official Service Agreement - Prismolix",
+    description:
+      "Review the official terms and conditions for using Prismolix services. Understand our recruitment policies and legal guidelines. Read the full terms here.",
+  },
+};
+
 const page = () => {
   return (
     <>

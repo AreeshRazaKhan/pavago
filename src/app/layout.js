@@ -21,25 +21,25 @@ const inter = Inter({
 
 
 export const metadata = {
-  title: "Prismolix • Elite Offshore Recruitment & Talent Solutions",
+  title: "Global Offshore Staffing Solutions | Hire Top Remote Talent - Prismolix",
   description:
-    "Prismolix connects businesses with the top 1% of offshore talent. Specialized recruitment for Engineering, Finance, Sales, and Admin to help you scale while reducing overhead.",
+    "Scale your business with Prismolix. We provide elite offshore staffing and remote team solutions to save costs and boost productivity. Hire your global team today!",
   alternates: {
     canonical: "https://www.prismolix.com/",
   },
   openGraph: {
     type: "website",
     url: "https://prismolix.com",
-    title: "Prismolix • Scale Faster with Elite Offshore Talent",
+    title: "Global Offshore Staffing Solutions | Hire Top Remote Talent - Prismolix",
     description:
-      "Stop overpaying for local talent. Prismolix sources, vets, and onboards top-tier offshore professionals in just 3 weeks. Expert hiring for growing enterprises.",
+      "Scale your business with Prismolix. We provide elite offshore staffing and remote team solutions to save costs and boost productivity. Hire your global team today!",
 
   },
   twitter: {
     card: "summary_large_image",
-    title: "Prismolix • Your Global Offshore Hiring Partner",
+    title: "Global Offshore Staffing Solutions | Hire Top Remote Talent - Prismolix",
     description:
-      "Access the world's top 1% talent pool. From software engineers to finance experts, we handle the recruitment so you can focus on growth.",
+      "Scale your business with Prismolix. We provide elite offshore staffing and remote team solutions to save costs and boost productivity. Hire your global team today!",
   },
 };
 

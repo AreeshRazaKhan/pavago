@@ -6,6 +6,31 @@ import PricingTabs from "@/app/components/ui/PricingTabs";
 import "../../../styles/globals.css";
 import HiringModal from "@/app/components/modal/HiringModal";
 
+export const metadata = {
+  title:
+    "Transparent Offshore Staffing Pricing | Affordable Hiring Plans - Prismolix",
+  description:
+    "Get premium global talent without the overhead. Explore our transparent, cost-effective hiring models with no hidden fees. Find the perfect plan for your business today.",
+  alternates: {
+    canonical: "https://www.prismolix.com/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://prismolix.com",
+    title:
+      "Transparent Offshore Staffing Pricing | Affordable Hiring Plans - Prismolix",
+    description:
+      "Get premium global talent without the overhead. Explore our transparent, cost-effective hiring models with no hidden fees. Find the perfect plan for your business today.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Transparent Offshore Staffing Pricing | Affordable Hiring Plans - Prismolix",
+    description:
+      "Get premium global talent without the overhead. Explore our transparent, cost-effective hiring models with no hidden fees. Find the perfect plan for your business today.",
+  },
+};
+
 const page = () => {
   return (
     <>
