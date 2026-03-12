@@ -7,11 +7,61 @@ import HiringForm from "@/app/components/ui/HiringForm";
 import HiringButton from "@/app/components/ui/HiringButton";
 import { getSingleSubService } from "@/services/services.service";
 import HiringModal from "@/app/components/modal/HiringModal";
+import { cleanSEOData } from "@/helpers/cleanUrl";
+
+const getCategorySlug = (data) => {
+  const categoryClass = data?.class_list?.find((c) =>
+    c.startsWith("service_groups-"),
+  );
+  return categoryClass ? categoryClass.replace("service_groups-", "") : "";
+};
+
+export async function generateMetadata({ params }) {
+  const { subServiceSlug } = await params;
+
+  // 1. Sub-service data fetch
+  const data = await getSingleSubService(subServiceSlug);
+  if (!data) return { title: "Service Not Found" };
+
+  // 2. Get the dynamic category slug (e.g., hire-admin)
+  const categorySlug = getCategorySlug(data);
+
+  // 3. Yoast SEO fetch
+  const response = await fetch(
+    `https://api.prismolix.com/wp-json/yoast/v1/get_head?url=https://api.prismolix.com/services/${subServiceSlug}/`,
+  );
+  const seoData = await response.json();
+
+  if (seoData?.json) {
+    // 4. Clean URLs (api removal + path transformation)
+    const cleanJson = cleanSEOData(seoData.json, categorySlug);
+
+    return {
+      title: cleanJson.title,
+      description: cleanJson.description,
+      alternates: {
+        canonical: cleanJson.canonical,
+      },
+      openGraph: {
+        title: cleanJson.og_title,
+        description: cleanJson.og_description,
+        url: cleanJson.og_url,
+        siteName: cleanJson.og_site_name,
+        type: "article",
+      },
+    };
+  }
+}
 
 const Page = async ({ params }) => {
   const { subServiceSlug } = await params;
 
   const data = await getSingleSubService(subServiceSlug);
+
+  const seoResponse = await fetch(
+    `https://api.prismolix.com/wp-json/yoast/v1/get_head?url=https://api.prismolix.com/services/${subServiceSlug}/`,
+  );
+  const seoData = await seoResponse.json();
 
   if (!data) {
     return (
@@ -23,8 +73,21 @@ const Page = async ({ params }) => {
 
   const { acf } = data;
 
+  const categorySlug = getCategorySlug(data);
+
+  const cleanSchema = seoData?.json?.schema
+    ? cleanSEOData(seoData.json.schema, categorySlug)
+    : null;
+
   return (
     <>
+      {cleanSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(cleanSchema) }}
+        />
+      )}
+
       <section className="pt-32 sm:pt-40 lg:pt-45 pb-20 px-3 md:px-4 lg:px-5 about-hero-section bg-[#f2ebff]! bg-[url('/images/hero-section-bg.svg')]! bg-top bg-no-repeat">
         <div className="container mx-auto">
           <div className="max-w-250 mx-auto">
