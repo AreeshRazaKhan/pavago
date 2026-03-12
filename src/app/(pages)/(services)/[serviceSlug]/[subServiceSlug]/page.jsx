@@ -7,65 +7,23 @@ import HiringForm from "@/app/components/ui/HiringForm";
 import HiringButton from "@/app/components/ui/HiringButton";
 import { getSingleSubService } from "@/services/services.service";
 import HiringModal from "@/app/components/modal/HiringModal";
-import { cleanSEOData } from "@/helpers/cleanUrl";
-
-const getCategorySlug = (data) => {
-  const categoryClass = data?.class_list?.find((c) =>
-    c.startsWith("service_groups-"),
-  );
-  return categoryClass ? categoryClass.replace("service_groups-", "") : "";
-};
+import { formatMetadata, formatSchema } from "@/utils/seo";
 
 export async function generateMetadata({ params }) {
   const { subServiceSlug } = await params;
-
-  // 1. Sub-service data fetch
   const data = await getSingleSubService(subServiceSlug);
-  if (!data) return { title: "Service Not Found" };
 
-  const seoData = data.yoast_head_json;
-  const categorySlug = getCategorySlug(data);
-
-  if (seoData) {
-    const cleanJson = cleanSEOData(seoData, categorySlug);
-
-    return {
-      title: cleanJson.title,
-      description: cleanJson.description,
-      alternates: {
-        canonical: cleanJson.canonical,
-      },
-      openGraph: {
-        title: cleanJson.og_title,
-        description: cleanJson.og_description,
-        url: cleanJson.og_url,
-        siteName: cleanJson.og_site_name,
-        type: "article",
-      },
-    };
-  }
+  return formatMetadata(data) || { title: "Prismolix" };
 }
 
 const Page = async ({ params }) => {
   const { subServiceSlug } = await params;
-
   const data = await getSingleSubService(subServiceSlug);
 
-  if (!data) {
-    return (
-      <div className="pt-40 text-center font-h2">
-        Service details not found.
-      </div>
-    );
-  }
+  if (!data) return <div className="pt-40 text-center">Service not found.</div>;
 
   const { acf } = data;
-
-  const categorySlug = getCategorySlug(data);
-
-  const cleanSchema = data.yoast_head_json?.schema
-    ? cleanSEOData(data.yoast_head_json.schema, categorySlug)
-    : null;
+  const cleanSchema = formatSchema(data);
 
   return (
     <>
