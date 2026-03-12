@@ -23,18 +23,11 @@ export async function generateMetadata({ params }) {
   const data = await getSingleSubService(subServiceSlug);
   if (!data) return { title: "Service Not Found" };
 
-  // 2. Get the dynamic category slug (e.g., hire-admin)
+  const seoData = data.yoast_head_json;
   const categorySlug = getCategorySlug(data);
 
-  // 3. Yoast SEO fetch
-  const response = await fetch(
-    `https://api.prismolix.com/wp-json/yoast/v1/get_head?url=https://api.prismolix.com/services/${subServiceSlug}/`,
-  );
-  const seoData = await response.json();
-
-  if (seoData?.json) {
-    // 4. Clean URLs (api removal + path transformation)
-    const cleanJson = cleanSEOData(seoData.json, categorySlug);
+  if (seoData) {
+    const cleanJson = cleanSEOData(seoData, categorySlug);
 
     return {
       title: cleanJson.title,
@@ -58,11 +51,6 @@ const Page = async ({ params }) => {
 
   const data = await getSingleSubService(subServiceSlug);
 
-  const seoResponse = await fetch(
-    `https://api.prismolix.com/wp-json/yoast/v1/get_head?url=https://api.prismolix.com/services/${subServiceSlug}/`,
-  );
-  const seoData = await seoResponse.json();
-
   if (!data) {
     return (
       <div className="pt-40 text-center font-h2">
@@ -75,8 +63,8 @@ const Page = async ({ params }) => {
 
   const categorySlug = getCategorySlug(data);
 
-  const cleanSchema = seoData?.json?.schema
-    ? cleanSEOData(seoData.json.schema, categorySlug)
+  const cleanSchema = data.yoast_head_json?.schema
+    ? cleanSEOData(data.yoast_head_json.schema, categorySlug)
     : null;
 
   return (
