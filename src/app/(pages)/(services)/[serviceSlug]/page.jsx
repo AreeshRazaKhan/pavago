@@ -2,7 +2,7 @@ import CTA from "@/app/components/cta/CTA";
 import FAQ from "@/app/components/faq/FAQ";
 import OurPricing from "@/app/components/pricing/OurPricing";
 import Link from "next/link";
-import React, { Suspense } from "react";
+import React from "react";
 import {
   getServiceCategory,
   getSubServicesByCategoryId,
