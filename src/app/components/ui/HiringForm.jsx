@@ -41,7 +41,7 @@ const HiringForm = () => {
       } else {
         setError(
           response.message ||
-            "An unexpected error has occurred, please try again.",
+          "An unexpected error has occurred, please try again.",
         );
       }
     } catch (error) {
@@ -62,6 +62,7 @@ const HiringForm = () => {
           onSubmit={handleSubmit}
         >
           <input
+            autoFocus
             disabled={loading || success}
             value={email}
             onInput={(e) => setEmail(e.target.value)}
