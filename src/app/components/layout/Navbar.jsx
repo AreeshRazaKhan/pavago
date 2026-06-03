@@ -63,7 +63,7 @@ const Navbar = () => {
                 {item.columns ? (
                   <button
                     onClick={() => handleMenuClick(idx)}
-                    className={`flex items-center gap-1 transition-colors hover:text-[#6B1AFF] ${
+                    className={`flex items-center gap-1 transition-colors hover:text-[#6B1AFF] cursor-pointer ${
                       activeMenu === idx ? "text-[#6B1AFF]" : ""
                     }`}
                   >

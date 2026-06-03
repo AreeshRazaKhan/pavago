@@ -10,27 +10,24 @@ import { getCanonicalUrl } from "@/utils/site";
 const canonicalUrl = getCanonicalUrl("/pricing");
 
 export const metadata = {
-  title:
-    "Transparent Offshore Staffing Pricing | Affordable Hiring Plans - Prismolix",
+  title: "Offshore Staffing Pricing & Hiring Plans | Prismolix",
   description:
-    "Get premium global talent without the overhead. Explore our transparent, cost-effective hiring models with no hidden fees. Find the perfect plan for your business today.",
+    "Get premium global talent without the overhead. Transparent, cost-effective hiring plans with no hidden fees. Find your perfect plan today.",
   alternates: {
     canonical: canonicalUrl,
   },
   openGraph: {
     type: "website",
     url: canonicalUrl,
-    title:
-      "Transparent Offshore Staffing Pricing | Affordable Hiring Plans - Prismolix",
+    title: "Offshore Staffing Pricing & Hiring Plans | Prismolix",
     description:
-      "Get premium global talent without the overhead. Explore our transparent, cost-effective hiring models with no hidden fees. Find the perfect plan for your business today.",
+      "Get premium global talent without the overhead. Transparent, cost-effective hiring plans with no hidden fees. Find your perfect plan today.",
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Transparent Offshore Staffing Pricing | Affordable Hiring Plans - Prismolix",
+    title: "Offshore Staffing Pricing & Hiring Plans | Prismolix",
     description:
-      "Get premium global talent without the overhead. Explore our transparent, cost-effective hiring models with no hidden fees. Find the perfect plan for your business today.",
+      "Get premium global talent without the overhead. Transparent, cost-effective hiring plans with no hidden fees. Find your perfect plan today.",
   },
 };
 

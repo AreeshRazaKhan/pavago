@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useModal } from "@/context/ModalContext";
 
 const faqData = [
@@ -30,6 +30,19 @@ const faqData = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqData.map(({ question, answer }) => ({
+    "@type": "Question",
+    name: question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: answer,
+    },
+  })),
+};
+
 const FAQ = () => {
   const [activeId, setActiveId] = useState(null);
   const { openHiringModal } = useModal();
@@ -39,6 +52,12 @@ const FAQ = () => {
   };
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <section className="bg-[#F2EBFF] py-70 px-3 md:px-4 lg:px-5 overflow-x-hidden">
         <div className="container mx-auto">
           <h2 className="font-semibold! text-center">
@@ -54,6 +73,8 @@ const FAQ = () => {
                 >
                   <button
                     onClick={() => toggleAccordion(item.id)}
+                    aria-expanded={activeId === item.id}
+                    aria-controls={`faq-answer-${item.id}`}
                     className="flex w-full cursor-pointer items-center justify-between outline-none ps-5 pb-4 pe-8 md:ps-6 lg:ps-7.5 md:pb-5 lg:pb-6 md:pe-10 lg:pe-20"
                   >
                     <h3 className="font-semibold!  text-left">
@@ -61,28 +82,24 @@ const FAQ = () => {
                     </h3>
                   </button>
 
-                  <AnimatePresence initial={false}>
-                    {activeId === item.id && (
-                      <motion.div
-                        key="content"
-                        initial="collapsed"
-                        animate="open"
-                        exit="collapsed"
-                        variants={{
-                          open: { opacity: 1, height: "auto" },
-                          collapsed: { opacity: 0, height: 0 },
-                        }}
-                        transition={{
-                          duration: 0.3,
-                          ease: [0.04, 0.62, 0.23, 0.98],
-                        }}
-                      >
-                        <p className="p-5 md:p-6 lg:p-7.5 pt-0!  fs-18">
-                          {item.answer}
-                        </p>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  <motion.div
+                    id={`faq-answer-${item.id}`}
+                    initial={false}
+                    animate={activeId === item.id ? "open" : "collapsed"}
+                    variants={{
+                      open: { opacity: 1, height: "auto" },
+                      collapsed: { opacity: 0, height: 0 },
+                    }}
+                    transition={{
+                      duration: 0.3,
+                      ease: [0.04, 0.62, 0.23, 0.98],
+                    }}
+                    className="overflow-hidden"
+                  >
+                    <p className="p-5 md:p-6 lg:p-7.5 pt-0!  fs-18">
+                      {item.answer}
+                    </p>
+                  </motion.div>
                 </div>
               ))}
             </div>

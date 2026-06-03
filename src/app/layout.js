@@ -23,25 +23,24 @@ const inter = Inter({
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Global Offshore Staffing Solutions | Hire Top Remote Talent - Prismolix",
+  title: "Offshore Staffing & Remote Teams | Prismolix",
   description:
-    "Scale your business with Prismolix. We provide elite offshore staffing and remote team solutions to save costs and boost productivity. Hire your global team today!",
+    "Scale your business with Prismolix's elite offshore staffing solutions. Save costs, boost productivity, and hire your global team today!",
   alternates: {
     canonical: getCanonicalUrl(),
   },
   openGraph: {
     type: "website",
     url: getCanonicalUrl(),
-    title: "Global Offshore Staffing Solutions | Hire Top Remote Talent - Prismolix",
+    title: "Offshore Staffing & Remote Teams | Prismolix",
     description:
-      "Scale your business with Prismolix. We provide elite offshore staffing and remote team solutions to save costs and boost productivity. Hire your global team today!",
-
+      "Scale your business with Prismolix's elite offshore staffing solutions. Save costs, boost productivity, and hire your global team today!",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Global Offshore Staffing Solutions | Hire Top Remote Talent - Prismolix",
+    title: "Offshore Staffing & Remote Teams | Prismolix",
     description:
-      "Scale your business with Prismolix. We provide elite offshore staffing and remote team solutions to save costs and boost productivity. Hire your global team today!",
+      "Scale your business with Prismolix's elite offshore staffing solutions. Save costs, boost productivity, and hire your global team today!",
   },
 };
 

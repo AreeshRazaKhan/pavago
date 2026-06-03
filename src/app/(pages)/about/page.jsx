@@ -8,27 +8,24 @@ import React from "react";
 const canonicalUrl = getCanonicalUrl("/about");
 
 export const metadata = {
-  title:
-    "About Prismolix | Leading Global Recruitment & Talent Sourcing Agency",
+  title: "Prismolix | Global Recruitment & Talent Sourcing Agency",
   description:
-    "Learn how Prismolix bridges the gap between top global talent and growing businesses. Discover our mission to simplify offshore hiring. Read our story and join us.",
+    "Prismolix connects businesses with top global talent. We simplify offshore hiring — from sourcing to placement. Start hiring today.",
   alternates: {
     canonical: canonicalUrl,
   },
   openGraph: {
     type: "website",
     url: canonicalUrl,
-    title:
-      "About Prismolix | Leading Global Recruitment & Talent Sourcing Agency",
+    title: "Prismolix | Global Recruitment & Talent Sourcing Agency",
     description:
-      "Learn how Prismolix bridges the gap between top global talent and growing businesses. Discover our mission to simplify offshore hiring. Read our story and join us.",
+      "Prismolix connects businesses with top global talent. We simplify offshore hiring — from sourcing to placement. Start hiring today.",
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "About Prismolix | Leading Global Recruitment & Talent Sourcing Agency",
+    title: "Prismolix | Global Recruitment & Talent Sourcing Agency",
     description:
-      "Learn how Prismolix bridges the gap between top global talent and growing businesses. Discover our mission to simplify offshore hiring. Read our story and join us.",
+      "Prismolix connects businesses with top global talent. We simplify offshore hiring — from sourcing to placement. Start hiring today.",
   },
 };
 
