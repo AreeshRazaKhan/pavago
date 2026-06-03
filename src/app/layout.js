@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import Footer from "./components/layout/Footer";
 import { ModalProvider } from "@/context/ModalContext";
 import Navbar from "./components/layout/Navbar";
+import HiringModal from "./components/modal/HiringModal";
 import { Toaster } from 'react-hot-toast';
 import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google'
 import { getCanonicalUrl, SITE_URL } from "@/utils/site";
@@ -57,6 +58,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           {children}
           <Footer />
+          <HiringModal />
         </ModalProvider>
 
         <GoogleAnalytics gaId="G-VTDWGDH90L" />

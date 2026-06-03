@@ -6,7 +6,6 @@ import Testimonials from "@/app/components/testimonials/Testimonials";
 import HiringForm from "@/app/components/ui/HiringForm";
 import HiringButton from "@/app/components/ui/HiringButton";
 import { getSingleSubService } from "@/services/services.service";
-import HiringModal from "@/app/components/modal/HiringModal";
 import { formatMetadata, formatSchema } from "@/utils/seo";
 import { getCanonicalUrl } from "@/utils/site";
 
@@ -195,8 +194,6 @@ const Page = async ({ params }) => {
         heading={"Ready to Scale Your Vision with Top-Tier Offshore Talent?"}
         para={"Schedule Your Complimentary Consultation Today!"}
       />
-
-      <HiringModal />
     </>
   );
 };

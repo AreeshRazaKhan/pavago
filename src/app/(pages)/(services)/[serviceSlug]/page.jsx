@@ -7,7 +7,6 @@ import {
   getServiceCategory,
   getSubServicesByCategoryId,
 } from "@/services/services.service";
-import HiringModal from "@/app/components/modal/HiringModal";
 import { getCanonicalUrl } from "@/utils/site";
 
 export async function generateMetadata({ params }) {
@@ -107,8 +106,6 @@ const page = async ({ params }) => {
       <CTA heading={acf?.cta_heading} para={acf?.cta_paragraph} />
       <OurPricing />
       <FAQ />
-
-      <HiringModal />
     </>
   );
 };

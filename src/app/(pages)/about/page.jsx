@@ -1,6 +1,5 @@
 import CTA from "@/app/components/cta/CTA";
 import FAQ from "@/app/components/faq/FAQ";
-import HiringModal from "@/app/components/modal/HiringModal";
 import HiringForm from "@/app/components/ui/HiringForm";
 import { getCanonicalUrl } from "@/utils/site";
 import React from "react";
@@ -107,8 +106,6 @@ const page = () => {
           "Your comprehensive recruitment ally to optimize candidate sourcing, hiring, integration, payroll, loyalty, and regulation."
         }
       />
-
-      <HiringModal />
     </>
   );
 };
