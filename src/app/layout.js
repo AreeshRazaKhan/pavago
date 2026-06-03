@@ -5,6 +5,7 @@ import { ModalProvider } from "@/context/ModalContext";
 import Navbar from "./components/layout/Navbar";
 import { Toaster } from 'react-hot-toast';
 import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google'
+import { getCanonicalUrl, SITE_URL } from "@/utils/site";
 
 
 const poppins = Poppins({
@@ -21,15 +22,16 @@ const inter = Inter({
 
 
 export const metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Global Offshore Staffing Solutions | Hire Top Remote Talent - Prismolix",
   description:
     "Scale your business with Prismolix. We provide elite offshore staffing and remote team solutions to save costs and boost productivity. Hire your global team today!",
   alternates: {
-    canonical: "https://www.prismolix.com/",
+    canonical: getCanonicalUrl(),
   },
   openGraph: {
     type: "website",
-    url: "https://prismolix.com",
+    url: getCanonicalUrl(),
     title: "Global Offshore Staffing Solutions | Hire Top Remote Talent - Prismolix",
     description:
       "Scale your business with Prismolix. We provide elite offshore staffing and remote team solutions to save costs and boost productivity. Hire your global team today!",

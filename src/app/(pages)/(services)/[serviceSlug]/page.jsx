@@ -8,6 +8,46 @@ import {
   getSubServicesByCategoryId,
 } from "@/services/services.service";
 import HiringModal from "@/app/components/modal/HiringModal";
+import { getCanonicalUrl } from "@/utils/site";
+
+export async function generateMetadata({ params }) {
+  const { serviceSlug } = await params;
+  const category = await getServiceCategory(serviceSlug);
+  const canonicalUrl = getCanonicalUrl(`/${serviceSlug}`);
+
+  if (!category) {
+    return {
+      title: "Service Not Found | Prismolix",
+      alternates: {
+        canonical: canonicalUrl,
+      },
+    };
+  }
+
+  const title = `${category?.acf?.title || category.name} | Prismolix`;
+  const description =
+    category?.acf?.sub_title ||
+    "Explore Prismolix offshore staffing services and hire elite global talent for your business.";
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      type: "website",
+      url: canonicalUrl,
+      title,
+      description,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+  };
+}
 
 const page = async ({ params }) => {
   const { serviceSlug } = await params;

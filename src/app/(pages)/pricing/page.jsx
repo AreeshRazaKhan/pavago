@@ -5,6 +5,9 @@ import HiringForm from "@/app/components/ui/HiringForm";
 import PricingTabs from "@/app/components/ui/PricingTabs";
 import "../../../styles/globals.css";
 import HiringModal from "@/app/components/modal/HiringModal";
+import { getCanonicalUrl } from "@/utils/site";
+
+const canonicalUrl = getCanonicalUrl("/pricing");
 
 export const metadata = {
   title:
@@ -12,11 +15,11 @@ export const metadata = {
   description:
     "Get premium global talent without the overhead. Explore our transparent, cost-effective hiring models with no hidden fees. Find the perfect plan for your business today.",
   alternates: {
-    canonical: "https://www.prismolix.com/",
+    canonical: canonicalUrl,
   },
   openGraph: {
     type: "website",
-    url: "https://prismolix.com",
+    url: canonicalUrl,
     title:
       "Transparent Offshore Staffing Pricing | Affordable Hiring Plans - Prismolix",
     description:

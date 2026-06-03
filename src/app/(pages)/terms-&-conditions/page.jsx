@@ -1,17 +1,20 @@
 import React from "react";
 import "@/styles/blog.css";
 import Link from "next/link";
+import { getCanonicalUrl } from "@/utils/site";
+
+const canonicalUrl = getCanonicalUrl("/terms-&-conditions");
 
 export const metadata = {
   title: "Terms & Conditions | Official Service Agreement - Prismolix",
   description:
     "Review the official terms and conditions for using Prismolix services. Understand our recruitment policies and legal guidelines. Read the full terms here.",
   alternates: {
-    canonical: "https://www.prismolix.com/",
+    canonical: canonicalUrl,
   },
   openGraph: {
     type: "website",
-    url: "https://prismolix.com",
+    url: canonicalUrl,
     title: "Terms & Conditions | Official Service Agreement - Prismolix",
     description:
       "Review the official terms and conditions for using Prismolix services. Understand our recruitment policies and legal guidelines. Read the full terms here.",
@@ -75,7 +78,7 @@ const page = () => {
               <p>
                 Prismolix owns all proprietary rights to the Services, including
                 source code, databases, website designs, graphics, and
-                trademarks (the "Marks"). We grant you a non-exclusive,
+                trademarks (the &quot;Marks&quot;). We grant you a non-exclusive,
                 revocable license to access the Services for your internal
                 business use only. You may not reproduce, distribute, or sell
                 any Content or Marks without our express written consent.
@@ -148,7 +151,7 @@ const page = () => {
               <h3>8. User-Generated Contributions</h3>
               <p>
                 While we do not typically host user posts, any feedback,
-                suggestions, or materials you provide ("Contributions") grant us
+                suggestions, or materials you provide (&quot;Contributions&quot;) grant us
                 a license to use that information in accordance with our Privacy
                 Policy. You represent that your Contributions do not infringe on
                 the intellectual property rights of any third party.
@@ -226,7 +229,7 @@ const page = () => {
               <h3>17. Indemnification</h3>
               <p>
                 You agree to defend and hold Prismolix harmless from any claims,
-                damages, or expenses (including attorney's fees) arising from
+                damages, or expenses (including attorney&apos;s fees) arising from
                 your use of the Services or breach of these Legal Terms.
               </p>
 

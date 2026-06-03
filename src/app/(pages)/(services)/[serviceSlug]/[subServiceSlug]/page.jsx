@@ -8,12 +8,34 @@ import HiringButton from "@/app/components/ui/HiringButton";
 import { getSingleSubService } from "@/services/services.service";
 import HiringModal from "@/app/components/modal/HiringModal";
 import { formatMetadata, formatSchema } from "@/utils/seo";
+import { getCanonicalUrl } from "@/utils/site";
 
 export async function generateMetadata({ params }) {
-  const { subServiceSlug } = await params;
+  const { serviceSlug, subServiceSlug } = await params;
   const data = await getSingleSubService(subServiceSlug);
+  const canonicalUrl = getCanonicalUrl(`/${serviceSlug}/${subServiceSlug}`);
+  const metadata = formatMetadata(data);
 
-  return formatMetadata(data) || { title: "Prismolix" };
+  if (!metadata) {
+    return {
+      title: "Prismolix",
+      alternates: {
+        canonical: canonicalUrl,
+      },
+    };
+  }
+
+  return {
+    ...metadata,
+    alternates: {
+      ...metadata.alternates,
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      ...metadata.openGraph,
+      url: canonicalUrl,
+    },
+  };
 }
 
 const Page = async ({ params }) => {

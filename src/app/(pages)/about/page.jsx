@@ -2,7 +2,10 @@ import CTA from "@/app/components/cta/CTA";
 import FAQ from "@/app/components/faq/FAQ";
 import HiringModal from "@/app/components/modal/HiringModal";
 import HiringForm from "@/app/components/ui/HiringForm";
+import { getCanonicalUrl } from "@/utils/site";
 import React from "react";
+
+const canonicalUrl = getCanonicalUrl("/about");
 
 export const metadata = {
   title:
@@ -10,11 +13,11 @@ export const metadata = {
   description:
     "Learn how Prismolix bridges the gap between top global talent and growing businesses. Discover our mission to simplify offshore hiring. Read our story and join us.",
   alternates: {
-    canonical: "https://www.prismolix.com/",
+    canonical: canonicalUrl,
   },
   openGraph: {
     type: "website",
-    url: "https://prismolix.com",
+    url: canonicalUrl,
     title:
       "About Prismolix | Leading Global Recruitment & Talent Sourcing Agency",
     description:
