@@ -52,7 +52,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="logo-wrapper max-w-28 sm:max-w-36">
             <Link href="/" onClick={() => setActiveMenu(null)}>
-              <img src="/images/logo.webp" alt="Logo" />
+              <img width={144} height={30} src="/images/logo.webp" alt="Logo" />
             </Link>
           </div>
 
@@ -63,9 +63,8 @@ const Navbar = () => {
                 {item.columns ? (
                   <button
                     onClick={() => handleMenuClick(idx)}
-                    className={`flex items-center gap-1 transition-colors hover:text-[#6B1AFF] cursor-pointer ${
-                      activeMenu === idx ? "text-[#6B1AFF]" : ""
-                    }`}
+                    className={`flex items-center gap-1 transition-colors hover:text-[#6B1AFF] cursor-pointer ${activeMenu === idx ? "text-[#6B1AFF]" : ""
+                      }`}
                   >
                     {item.title}
                     <motion.div

@@ -9,6 +9,8 @@ const RecruitmentContent = () => {
           <div className="flex flex-col items-center gap-5 md:gap-6">
             <div className="img-wrapper w-12">
               <img
+                width={48}
+                height={48}
                 src="/images/stacks.svg"
                 alt=""
                 className="w-full! h-full! object-contain"
@@ -31,6 +33,7 @@ const RecruitmentContent = () => {
             <li className="flex items-center gap-4 text-white">
               <div className="img-wrapper min-w-4 w-4 h-4 lg:min-w-6 lg:w-6 lg:h-6">
                 <img
+                  alt="checkmark-icon"
                   src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67033c9d2759a79b03517daa_check-white.svg"
                   className="w-full! h-full! object-contain"
                 />
@@ -42,6 +45,7 @@ const RecruitmentContent = () => {
             <li className="flex items-center gap-4 text-white">
               <div className="img-wrapper min-w-4 w-4 h-4 lg:min-w-6 lg:w-6 lg:h-6">
                 <img
+                  alt="checkmark-icon"
                   src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67033c9d2759a79b03517daa_check-white.svg"
                   className="w-full! h-full! object-contain"
                 />
@@ -53,6 +57,7 @@ const RecruitmentContent = () => {
             <li className="flex items-center gap-4 text-white">
               <div className="img-wrapper min-w-4 w-4 h-4 lg:min-w-6 lg:w-6 lg:h-6">
                 <img
+                  alt="checkmark-icon"
                   src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67033c9d2759a79b03517daa_check-white.svg"
                   className="w-full! h-full! object-contain"
                 />
@@ -64,6 +69,7 @@ const RecruitmentContent = () => {
             <li className="flex items-center gap-4 text-white">
               <div className="img-wrapper min-w-4 w-4 h-4 lg:min-w-6 lg:w-6 lg:h-6">
                 <img
+                  alt="checkmark-icon"
                   src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67033c9d2759a79b03517daa_check-white.svg"
                   className="w-full! h-full! object-contain"
                 />
@@ -75,6 +81,7 @@ const RecruitmentContent = () => {
             <li className="flex items-center gap-4 text-white">
               <div className="img-wrapper min-w-4 w-4 h-4 lg:min-w-6 lg:w-6 lg:h-6">
                 <img
+                  alt="checkmark-icon"
                   src="https://cdn.prod.website-files.com/665e07a05eaec7b470f49845/67033c9d2759a79b03517daa_check-white.svg"
                   className="w-full! h-full! object-contain"
                 />
@@ -99,6 +106,8 @@ const RecruitmentContent = () => {
           <div className="flex flex-col items-center gap-5 md:gap-6">
             <div className="img-wrapper w-12">
               <img
+                width={48}
+                height={48}
                 src="/images/stacks.svg"
                 alt=""
                 className="w-full! h-full! object-contain"
@@ -118,6 +127,7 @@ const RecruitmentContent = () => {
             <li className="flex items-center gap-4">
               <div className="img-wrapper min-w-4 w-4 h-4 lg:min-w-6 lg:w-6 lg:h-6">
                 <img
+                  alt="checkmark-icon"
                   src="/images/tick.svg"
                   className="w-full! h-full! object-contain"
                 />
@@ -132,6 +142,7 @@ const RecruitmentContent = () => {
             <li className="flex items-center gap-4">
               <div className="img-wrapper min-w-4 w-4 h-4 lg:min-w-6 lg:w-6 lg:h-6">
                 <img
+                  alt="checkmark-fill-icon"
                   src="/images/tick.svg"
                   className="w-full! h-full! object-contain"
                 />
@@ -146,6 +157,7 @@ const RecruitmentContent = () => {
             <li className="flex items-center gap-4">
               <div className="img-wrapper min-w-4 w-4 h-4 lg:min-w-6 lg:w-6 lg:h-6">
                 <img
+                  alt="checkmark-fill-icon"
                   src="/images/tick.svg"
                   className="w-full! h-full! object-contain"
                 />
