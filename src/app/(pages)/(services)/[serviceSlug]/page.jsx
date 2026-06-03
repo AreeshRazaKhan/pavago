@@ -55,7 +55,7 @@ const page = async ({ params }) => {
 
   if (!category) {
     return (
-      <div className="pt-40 text-center">
+      <div className="pt-40 pb-20 text-center">
         <h1 className="text-2xl font-bold">Service Not Found</h1>
         <p className="mt-4">The requested service group does not exist.</p>
         <Link href="/" className="text-blue-500 underline mt-4 block">
