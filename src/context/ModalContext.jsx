@@ -15,16 +15,15 @@ export const ModalProvider = ({ children }) => {
     setIsHiringModalOpen(false);
   };
 
-  // Lock body scroll when modal is open
   useEffect(() => {
+    const originalOverflow = document.body.style.overflow;
+
     if (isHiringModalOpen) {
       document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
     }
 
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = originalOverflow;
     };
   }, [isHiringModalOpen]);
 

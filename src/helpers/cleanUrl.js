@@ -5,7 +5,7 @@ export const cleanSEOData = (data, categorySlug = "") => {
   if (!data) return "";
 
   const apiURL = "https://api.prismolix.com";
-  const mainURL = "https://prismolix.com";
+  const mainURL = "https://www.prismolix.com";
 
   let jsonString = typeof data === "string" ? data : JSON.stringify(data);
 

@@ -4,30 +4,29 @@ import Testimonials from "@/app/components/testimonials/Testimonials";
 import HiringForm from "@/app/components/ui/HiringForm";
 import PricingTabs from "@/app/components/ui/PricingTabs";
 import "../../../styles/globals.css";
-import HiringModal from "@/app/components/modal/HiringModal";
+import { getCanonicalUrl } from "@/utils/site";
+
+const canonicalUrl = getCanonicalUrl("/pricing");
 
 export const metadata = {
-  title:
-    "Transparent Offshore Staffing Pricing | Affordable Hiring Plans - Prismolix",
+  title: "Offshore Staffing Pricing & Hiring Plans | Prismolix",
   description:
-    "Get premium global talent without the overhead. Explore our transparent, cost-effective hiring models with no hidden fees. Find the perfect plan for your business today.",
+    "Get premium global talent without the overhead. Transparent, cost-effective hiring plans with no hidden fees. Find your perfect plan today.",
   alternates: {
-    canonical: "https://www.prismolix.com/",
+    canonical: canonicalUrl,
   },
   openGraph: {
     type: "website",
-    url: "https://prismolix.com",
-    title:
-      "Transparent Offshore Staffing Pricing | Affordable Hiring Plans - Prismolix",
+    url: canonicalUrl,
+    title: "Offshore Staffing Pricing & Hiring Plans | Prismolix",
     description:
-      "Get premium global talent without the overhead. Explore our transparent, cost-effective hiring models with no hidden fees. Find the perfect plan for your business today.",
+      "Get premium global talent without the overhead. Transparent, cost-effective hiring plans with no hidden fees. Find your perfect plan today.",
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Transparent Offshore Staffing Pricing | Affordable Hiring Plans - Prismolix",
+    title: "Offshore Staffing Pricing & Hiring Plans | Prismolix",
     description:
-      "Get premium global talent without the overhead. Explore our transparent, cost-effective hiring models with no hidden fees. Find the perfect plan for your business today.",
+      "Get premium global talent without the overhead. Transparent, cost-effective hiring plans with no hidden fees. Find your perfect plan today.",
   },
 };
 
@@ -139,8 +138,6 @@ const page = () => {
           "Your comprehensive global staffing ally to optimize candidate sourcing, hiring, integration, payroll, loyalty, and regulation."
         }
       />
-
-      <HiringModal />
     </>
   );
 };

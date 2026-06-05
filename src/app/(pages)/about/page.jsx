@@ -1,31 +1,30 @@
 import CTA from "@/app/components/cta/CTA";
 import FAQ from "@/app/components/faq/FAQ";
-import HiringModal from "@/app/components/modal/HiringModal";
 import HiringForm from "@/app/components/ui/HiringForm";
+import { getCanonicalUrl } from "@/utils/site";
 import React from "react";
 
+const canonicalUrl = getCanonicalUrl("/about");
+
 export const metadata = {
-  title:
-    "About Prismolix | Leading Global Recruitment & Talent Sourcing Agency",
+  title: "Prismolix | Global Recruitment & Talent Sourcing Agency",
   description:
-    "Learn how Prismolix bridges the gap between top global talent and growing businesses. Discover our mission to simplify offshore hiring. Read our story and join us.",
+    "Prismolix connects businesses with top global talent. We simplify offshore hiring — from sourcing to placement. Start hiring today.",
   alternates: {
-    canonical: "https://www.prismolix.com/",
+    canonical: canonicalUrl,
   },
   openGraph: {
     type: "website",
-    url: "https://prismolix.com",
-    title:
-      "About Prismolix | Leading Global Recruitment & Talent Sourcing Agency",
+    url: canonicalUrl,
+    title: "Prismolix | Global Recruitment & Talent Sourcing Agency",
     description:
-      "Learn how Prismolix bridges the gap between top global talent and growing businesses. Discover our mission to simplify offshore hiring. Read our story and join us.",
+      "Prismolix connects businesses with top global talent. We simplify offshore hiring — from sourcing to placement. Start hiring today.",
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "About Prismolix | Leading Global Recruitment & Talent Sourcing Agency",
+    title: "Prismolix | Global Recruitment & Talent Sourcing Agency",
     description:
-      "Learn how Prismolix bridges the gap between top global talent and growing businesses. Discover our mission to simplify offshore hiring. Read our story and join us.",
+      "Prismolix connects businesses with top global talent. We simplify offshore hiring — from sourcing to placement. Start hiring today.",
   },
 };
 
@@ -107,8 +106,6 @@ const page = () => {
           "Your comprehensive recruitment ally to optimize candidate sourcing, hiring, integration, payroll, loyalty, and regulation."
         }
       />
-
-      <HiringModal />
     </>
   );
 };

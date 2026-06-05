@@ -1,25 +1,28 @@
 import React from "react";
 import "@/styles/blog.css";
+import { getCanonicalUrl } from "@/utils/site";
+
+const canonicalUrl = getCanonicalUrl("/privacy-policy");
 
 export const metadata = {
   title: "Privacy Policy | How Prismolix Protects Your Personal Data",
   description:
-    "Your privacy is our priority. Read the Prismolix privacy policy to understand how we collect, use, and secure your data during recruitment. Learn more about your rights.",
+    "Your privacy is our priority. Read how Prismolix collects, uses, and secures your data during recruitment and learn about your rights.",
   alternates: {
-    canonical: "https://www.prismolix.com/",
+    canonical: canonicalUrl,
   },
   openGraph: {
     type: "website",
-    url: "https://prismolix.com",
+    url: canonicalUrl,
     title: "Privacy Policy | How Prismolix Protects Your Personal Data",
     description:
-      "Your privacy is our priority. Read the Prismolix privacy policy to understand how we collect, use, and secure your data during recruitment. Learn more about your rights.",
+      "Your privacy is our priority. Read how Prismolix collects, uses, and secures your data during recruitment and learn about your rights.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Privacy Policy | How Prismolix Protects Your Personal Data",
     description:
-      "Your privacy is our priority. Read the Prismolix privacy policy to understand how we collect, use, and secure your data during recruitment. Learn more about your rights.",
+      "Your privacy is our priority. Read how Prismolix collects, uses, and secures your data during recruitment and learn about your rights.",
   },
 };
 
@@ -47,11 +50,11 @@ const page = () => {
             <div className="blog-post-content">
               <h2>PRIVACY POLICY</h2>
               <p>
-                This Privacy Policy describes how Prismolix (the "Site", "we",
-                "us", or "our") collects, uses, and discloses your personal
+                This Privacy Policy describes how Prismolix (the &quot;Site&quot;, &quot;we&quot;,
+                &quot;us&quot;, or &quot;our&quot;) collects, uses, and discloses your personal
                 information when you visit, use our services, or communicate
-                with us (collectively, the "Services"). For purposes of this
-                Privacy Policy, "you" and "your" means you as the user of the
+                with us (collectively, the &quot;Services&quot;). For purposes of this
+                Privacy Policy, &quot;you&quot; and &quot;your&quot; means you as the user of the
                 Services, whether you are a client, candidate, or website
                 visitor.
               </p>
@@ -66,7 +69,7 @@ const page = () => {
               <p>
                 We may update this policy periodically to reflect changes in our
                 operational or legal practices. We will post the revised version
-                on this page and update the "Last updated" date accordingly.
+                on this page and update the &quot;Last updated&quot; date accordingly.
               </p>
 
               <h3>2. How We Collect Your Information</h3>
@@ -147,7 +150,7 @@ const page = () => {
                 sections.
               </p>
 
-              <h3>7. Children's Data</h3>
+              <h3>7. Children&apos;s Data</h3>
               <p>
                 Our Services are not intended for children. We do not knowingly
                 collect personal information from individuals under the age of
@@ -167,7 +170,7 @@ const page = () => {
               <ul>
                 <li>Access or request a copy of your data.</li>
                 <li>Request deletion or correction of inaccurate info.</li>
-                <li>Opt-out of targeted advertising or data "sharing."</li>
+                <li>Opt-out of targeted advertising or data &quot;sharing.&quot;</li>
                 <li>Withdraw consent for data processing at any time.</li>
               </ul>
 
